@@ -1,0 +1,240 @@
+/* Heading */
+
+.heading{
+    background-color: var( --gray800 );
+    padding-top: 10px;
+    padding-bottom: 9px;
+    display: flex;
+    gap: 244px;
+    align-items: center;
+}
+
+/* Contacts */
+
+.contacts{
+    display: flex;
+}
+
+.contacts__list{
+    display: flex;
+    gap: 15px;
+    margin-right: 17px;
+}
+
+.contacts__item{
+    width: 20px;
+    height: 20px;
+    
+    transition: 0.4s all ease-in-out;
+}
+
+.contacts__link{
+    width: 100%;
+    height: 100%;
+}
+
+.contacts__item:hover{
+    transform: translateY(-5px);
+}
+
+.telephone{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.telephone__icon{
+    width: 20px;
+    height: 20px;
+}
+
+.telephone__icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.telephone__number{
+    font-weight: 400;
+    color: var( --white );
+    line-height: 14px;
+}
+
+/* Navigation */
+
+.navigation__list{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 24px;
+}
+
+.navigation__link{
+    color: var( --white );
+    transition: 0.4s all ease-in-out;
+}
+
+.navigation__link:hover{
+    color: var( --gray100 );
+}
+
+/* User */
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.user__text{
+    color: var( --white );
+}
+
+/* Header */
+
+.header{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.07);
+}
+
+.header__wrapper{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.logo{
+    width: 155px;
+    height: 40px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Searсh */
+.searсh{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searсh__button{
+    width: 162px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var( --green700 );
+
+    border: 1.5px solid var( --green700 );
+    background: none;
+}
+
+.searсh__wrapper{
+    display: flex;
+    align-items:center
+}
+
+.search__input{
+    padding-left: 34px;   
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: var( --gray500 );
+
+    width: 857px;
+    height: 32px;
+
+    border: 1px solid var( --gray300 );
+    border-radius: 4px 0px 0px 4px;
+}
+
+.search__block{
+    position: relative;
+}
+
+.search__block::after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    background: url('../images/icons/Search.svg') no-repeat center;
+}
+
+.search__input::placeholder{
+    font-weight: 400;
+    color: var( --gray300 );
+}
+
+/* Gray button */
+.searсh__find{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    background: var( --gray600 );
+    border-radius: 0px 2px 2px 0px;
+    border: none;
+    width: 91px;
+    height: 34px;
+    color: var( --white );
+}
+
+/* Info */
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 143px;
+}
+
+.info_icon{
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.info_icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.info_icon::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var( --orange500 );
+    position: absolute;
+    top: -1px;
+    left: 18px;
+    border-radius: 100%;
+}
+
+.info__score{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.info__rub{
+    width: 16px;
+    height: 16px;  
+}
+
+.info__rub img{
+    width: 100%;
+    height: 100%;
+}
