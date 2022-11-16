@@ -8,16 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp --gulpfile ./config/gulpfile.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Maksimssw/Rona.git"
-  },
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Maksimssw/Rona/issues"
-  },
-  "homepage": "https://github.com/Maksimssw/Rona#readme",
   "dependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
