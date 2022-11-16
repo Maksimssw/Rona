@@ -1,8 +1,8 @@
 import gulp from "gulp";
 
 /* Configuration */
-import path from "../сonfig/path.js";
-import app from "../сonfig/app.js";
+import path from "../settings/path.js";
+import app from "../settings/app.js";
 
 /* Plugins */
 import plumber from "gulp-plumber"

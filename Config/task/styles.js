@@ -5,8 +5,8 @@ import plumber from "gulp-plumber"
 import webpCss from "gulp-webp-css"
 
 /* Configuration */
-import path from "../сonfig/path.js";
-import app from "../сonfig/app.js";
+import path from "../settings/path.js";
+import app from "../settings/app.js";
 
 /* CSS Processing */
 export default () => {

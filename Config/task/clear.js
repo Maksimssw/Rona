@@ -5,7 +5,7 @@ import del from "del";
 import clean from 'gulp-clean';
 
 /* Configuration */
-import path from "../сonfig/path.js";
+import path from "../settings/path.js";
 
 
 /* Deleting directories */

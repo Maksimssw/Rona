@@ -1,8 +1,6 @@
 import Swiper, { Navigation, Pagination }  from "swiper";
 
 
-console.log(1);
-
 let swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     modules: [Navigation, Pagination],
