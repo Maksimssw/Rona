@@ -99,7 +99,7 @@
 
 .header__wrapper{
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 26px;
     display: flex;
     align-items: center;
     gap: 64px;
@@ -152,7 +152,7 @@
     line-height: 100%;
     color: var( --gray500 );
 
-    width: 857px;
+    width: 893px;
     height: 32px;
 
     border: 1px solid var( --gray300 );
@@ -188,7 +188,7 @@
     border-radius: 0px 2px 2px 0px;
     border: none;
     width: 91px;
-    height: 34px;
+    height: 32px;
     color: var( --white );
 }
 
@@ -205,6 +205,7 @@
     width: 24px;
     height: 24px;
     position: relative;
+    cursor: pointer;
 }
 
 .info_icon img{
@@ -237,4 +238,112 @@
 .info__rub img{
     width: 100%;
     height: 100%;
+}
+
+
+/* Intro */
+
+.intro{
+    padding-top: 194px;
+    padding-bottom: 142px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.intro__wrapper{
+    width: 670px;
+}
+
+.intro__title{
+    color: var( --gray700 );
+    margin-bottom: 28px;
+}
+
+.intro__title span{
+    color: var( --green700 );
+}
+
+.intro__description{
+    color: var( --gray500 );
+    margin-bottom: 48px;
+    width: 482px;
+}
+
+.intro__button{
+    margin-bottom: 65px;
+}
+
+/* Swiper */
+
+.swiper{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.swiper-button-next{
+    z-index: 20;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.swiper-pagination_intro{
+    width: 94px;
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 100px;
+    top: 391px;
+}
+
+.swiper-button-next{
+    right: 67px;
+}
+
+.swiper-button-prev{
+    left: 71px;    
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('../images/icons/Left.svg') no-repeat center;
+}
+
+.swiper-button-next::after{
+    transform: rotate(180deg);
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: fit-content;
+    bottom: 0;
+}
+
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background-color: var( --gray200 );
+}
+
+.swiper-pagination-bullet-active{
+    transform: scale(1.2);
+    background-color: var( --green700 )
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,11px);
 }
