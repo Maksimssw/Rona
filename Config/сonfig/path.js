@@ -17,8 +17,8 @@ export default {
     },
 
     script: {
-        src: pathSrc + "/static/script/**/*.js",
-        dest: pathDest + "/static/script"
+        src: pathSrc + "/static/scripts/**/*.js",
+        dest: pathDest + "/static/scripts"
     },
 
     images: {
