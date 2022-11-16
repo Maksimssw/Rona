@@ -32,6 +32,12 @@ export default {
             message: error.message
         })) 
     },
+    plumberIcons: {
+        errorHandler: notify.onError(error => ({
+            title: "Icons",
+            message: error.message
+        })) 
+    },
 
     imagemin: {
         verbose: true

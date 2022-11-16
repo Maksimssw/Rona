@@ -26,6 +26,11 @@ export default {
         dest: pathDest + "/static/images"
     },
 
+    icons: {
+        src: pathSrc + "/static/icons/**/*.*",
+        dest: pathDest + "/static/icons"
+    },
+
     font: {
         src: pathSrc + "/static/fonts/**/*.{eot,ttf,otf,otc,woff,woff2,svg}",
         dest: pathDest + "/static/fonts"

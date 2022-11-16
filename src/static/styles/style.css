@@ -171,7 +171,7 @@
     top: 50%;
     left: 8px;
     transform: translateY(-50%);
-    background: url('../images/icons/Search.svg') no-repeat center;
+    background: url('../icons/search.svg') no-repeat center;
 }
 
 .search__input::placeholder{
@@ -321,7 +321,7 @@
     content: '';
     width: 24px;
     height: 24px;
-    background: url('../images/icons/Left.svg') no-repeat center;
+    background: url('../icons/left.svg') no-repeat center;
 }
 
 .swiper-button-next::after{
