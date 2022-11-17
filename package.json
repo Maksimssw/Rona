@@ -2,10 +2,9 @@
   "name": "rona",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.php",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp --gulpfile ./config/gulpfile.js"
   },
   "license": "ISC",
