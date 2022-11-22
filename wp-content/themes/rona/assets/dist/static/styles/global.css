@@ -1,0 +1,252 @@
+/* Fonts */
+
+/* Open Sans */
+@font-face {
+    font-family: 'OpenSans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/OpenSans-Medium.woff2') format('woff2')
+        url('../fonts/OpenSans-Medium.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2')
+        url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+}
+
+
+/* Montserrat */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2')
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2')
+        url('../fonts/Montserrat-Bold.woff') format('woff'),
+}
+
+/* Basic Styles */
+
+a{
+    display: block;
+}
+
+span{
+    display: block;
+}
+
+.container{
+    padding: 0 calc(50% - 795px);
+}
+
+ul li{
+    list-style-type: none;
+}
+
+body{
+    font-family: 'OpenSans', sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    outline: none;
+}
+
+main{
+    background-color: #F7F7F7;
+}
+
+/* Variables */
+
+:root{
+    --black: #000000;
+
+    --gray900: #1A1A1A;
+    --gray800: #333333;
+    --gray700: #4D4D4D;
+    --gray600: #666666;
+    --gray500: #808080;
+    --gray400: #999999;
+    --gray300: #808080;
+    --gray200: #CCCCCC;
+    --gray100: #E5E5E5;
+
+    --orange600:#EA580C;
+    --orange500:#F97316;
+    --green700: #0C8627;
+    --green600: #16A34A;
+    --green500: #11AF34;
+
+    --white: #FFFFFF;
+}
+
+/* Text */
+
+.text-2xl100{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.text-xl130{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.text-xl130_medium{
+    font-weight: 500;
+}
+
+.text-xl100{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.text-xl100_semibold{
+    width: 600px;
+}
+
+.text-base130{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.text-base130_semi{
+    font-weight: 600;
+}
+
+.text-base100{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.text-base100_medium{
+    font-weight: 500;
+}
+
+.text-sm100{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+/* Title */
+
+.title-5xl130{
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 119%;
+}
+
+.title-4xl130{
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 114%;
+}
+
+.title-4xl130_bold{
+    font-weight: 700;
+}
+
+/* Inverted Text */
+
+.inverted{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    max-width: fit-content;
+    right: 0;
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+.inverted__text{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: var( --gray500 );
+    position: relative;
+}
+
+.inverted__text::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    top: 50%;
+    left: -55px;
+    transform: translateY(-50%);
+    background-color: var( --gray500 );
+}
+
+/* Button */
+
+.button{
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-green{
+    display: block;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;  
+    background-color: var( --green700 );
+    width: 187px;
+    height: 40px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var( --white );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@supports (-webkit-appearance:none){
+
+}
