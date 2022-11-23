@@ -142,7 +142,7 @@ main{
 }
 
 .text-xl100_semibold{
-    width: 600px;
+    font-weight: 600;
 }
 
 .text-base130{
@@ -163,6 +163,12 @@ main{
 
 .text-base100_medium{
     font-weight: 500;
+}
+
+.text-xs100{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
 }
 
 .text-sm100{
@@ -246,4 +252,143 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Discounts */
+
+.discount{
+    display: none;
+    background: var( --orange500 );
+    color: var( --white );
+    border-radius: 2px;
+    padding: 5px 12px 5px 8px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+/* Adapting the width of 1440px */
+
+@media (min-width: 0px) and (max-width:1920px){
+    /*  Basic Styles */
+    .container{
+        padding: 0 calc(50% - 680px);
+    }
+
+    .inverted__text{
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    /* Title */
+
+    .title-5xl130{
+        font-size: 48px;
+    }
+
+    .title-4xl130{
+        font-size: 32px;   
+    }
+
+    /* Text */
+    .text-xl130{
+        font-size: 16px;
+    }
+}
+
+/* Adapting the width of 1180px */
+
+@media (min-width: 0px) and (max-width:1440px){
+    /*  Basic Styles */
+    .container{
+        padding: 0 calc( 50% - 570px );
+    }
+
+    .discount{
+        display: flex;
+    }
+
+    .text-base130{
+        font-size: 14px;
+    }
+
+    .text-xl130{
+        font-size: 14px;
+    }
+
+    .title-4xl130{
+        font-size: 24px;
+    }
+
+    .text-xl100{
+        font-size: 16px;
+    }
+}
+
+/* Adapting the width of 1024px */
+
+@media (min-width: 0px) and (max-width:1180px){
+    .container{
+        padding: 0 calc(50% - 490px);
+    }
+}
+
+/* Adapting the width of 960px */
+
+@media (min-width: 0px) and (max-width: 960px){
+    .container{
+        padding: 0 calc(50% - 460px);
+    }
+}
+
+/* Adapting the width of 768px */
+
+@media (min-width: 0px) and (max-width: 960px){
+    .container{
+        padding: 0 calc(50% - 360px);
+    }
+}
+
+/* Adapting the width of 640px */
+
+@media (min-width: 0px) and (max-width: 768px){
+    .container{
+        padding: 0 calc(50% - 296px);
+    }
+}
+
+/* Adapting the width of 460px */
+
+@media (min-width: 0px) and (max-width: 639px){
+    .container{
+        padding: 0 calc(50% - 224px);
+    }
+    .inverted{
+        position: static;
+        transform: rotate(0);
+        padding-left: 51px;
+    }
+
+    .inverted__text{
+        color: var( --gray700 );
+        font-size: 20px;
+    }
+    .inverted__text::before{
+        background-color: var( --gray700 );
+        width: 28px;
+        left: -40px;
+    }
+
+    .text-xl100{
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+/* Adapting the width of 320px */
+
+@media (min-width: 0px) and (max-width: 480px){
+    .container{
+        padding: 0 calc(50% - 160px);
+    }
 }

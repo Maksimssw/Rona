@@ -39,7 +39,28 @@ window.addEventListener('DOMContentLoaded', () => {
         observer: true,
         observeParents: true,
     
-        spaceBetween: 16
+        spaceBetween: 16,
+        
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 3,
+            },
+            960: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 4,
+            }
+        }
     });
 
     /* Map */
