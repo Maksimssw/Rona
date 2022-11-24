@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination }  from "swiper";
 
 window.addEventListener('DOMContentLoaded', () => {
-    let swiper = new Swiper(".mySwiper", {
+    new Swiper(".intro-swiper", {
         slidesPerView: 1,
         modules: [Navigation, Pagination],
         // If we need pagination
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     
     
-    let swiperFurniture = new Swiper(".furniture__swiper", {
+    new Swiper(".furniture__swiper", {
         slidesPerView: 4,
         modules: [Navigation, Pagination],
         // If we need pagination
