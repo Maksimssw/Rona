@@ -516,6 +516,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
+    color: var(--gray900);
 }
 
 .furniture__old {
@@ -573,6 +574,10 @@
 .swiper-button-next_furniture::after,
 .swiper-button-prev_furniture::after {
     content: '';
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: fit-content;
 }
 
 .swiper-button-next_furniture svg,
@@ -1668,6 +1673,11 @@
 
     .furniture__heading {
         font-weight: 500;
+    }
+
+    .furniture__buttons {
+        width: 100%;
+        justify-content: center;
     }
 
     .furniture__item {
