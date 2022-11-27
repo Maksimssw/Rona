@@ -140,82 +140,6 @@ input {
     display: inline-block;
 }
 
-/* Text */
-.text-2xl100 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 100%;
-}
-
-.text-xl130 {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 130%;
-}
-
-.text-xl130_medium {
-    font-weight: 500;
-}
-
-.text-xl100 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 100%;
-}
-
-.text-xl100_semibold {
-    font-weight: 600;
-}
-
-.text-base130 {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-}
-
-.text-base130_semi {
-    font-weight: 600;
-}
-
-.text-base100 {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-}
-
-.text-base100_medium {
-    font-weight: 500;
-}
-
-.text-xs100 {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 100%;
-}
-
-.text-sm100 {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-}
-
-/* Title */
-.title-5xl130 {
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 119%;
-}
-
-.title-4xl130 {
-    font-weight: 600;
-    font-size: 52px;
-    line-height: 114%;
-}
-
-.title-4xl130_bold {
-    font-weight: 700;
-}
-
 /* Inverted Text */
 .inverted {
     display: flex;
@@ -325,9 +249,9 @@ input {
 }
 
 /* Adapting the width of 960px */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 0 calc(50% - 460px);
+        padding: 0 calc(50% - 456px);
     }
 }
 

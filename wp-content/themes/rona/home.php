@@ -9,17 +9,6 @@
 
     <main>
         <section class="intro container">
-            <div class="intro__wrapper">
-                <h1 class="intro__title">
-                    <?php the_field('title-head-screen'); ?>
-                    <span><?php the_field('title-head-screen-green'); ?></span>
-                </h1>
-                <p class="intro__description"><?php the_field('subtitle-main-screen'); ?></p>
-                <a href="#" class="intro__button button-green">Перейти в каталог</a>
-                <div>
-                <div class="swiper-pagination intro-pagination"></div> 
-                </div>
-            </div>
             <div class="swiper intro-swiper">
                 <div class="swiper-wrapper">       
                 <?php
@@ -39,8 +28,18 @@
                 ?>
 
                 <div class="swiper-slide intro-slider__item">
-                    <img src="<?php the_field('slider-main-image'); ?>" alt="sofa">
-                </div>
+                        <div class="intro__wrapper container">
+                            <div class="intro__block">
+                                <h1 class="intro__title">
+                                    Уютный интерьер вместе с    
+                                    <span>РоНа</span>
+                                </h1>
+                                <p class="intro__description">Наш магазин - это необходимый инструмент, для того чтобы превратить Ваш дом в мечту!</p>
+                                <a href="#" class="intro__button button-green">Перейти в каталог</a>
+                            </div>
+                        </div>
+                        <img src="<?php the_field('slider-main-image'); ?>" alt="sofa">
+                    </div>
 
                 <?php }} wp_reset_postdata();?>
                 </div>
@@ -54,6 +53,9 @@
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg> 
                 </button>
+                <div class="intro__buttons container">
+                    <div class="swiper-pagination intro-pagination"></div>
+                </div> 
             </div>
         </section>
         <section class="furniture container">

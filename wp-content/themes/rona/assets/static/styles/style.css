@@ -276,14 +276,17 @@
 
 /* Intro */
 .intro {
-    padding-top: 194px;
-    padding-bottom: 155px;
+    min-height: 736px;
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 
 .intro__wrapper {
+    padding-top: 194px;
+}
+
+.intro__block{
     max-width: 670px;
 }
 
@@ -329,8 +332,15 @@
     height: 20px;
 }
 
+.intro__buttons{
+    position: absolute;
+    top: 580px;
+    z-index: 1;
+}
+
 .intro-pagination{
     position: static;
+    height: fit-content;
     display: flex;
     justify-content: start;
 }
@@ -351,6 +361,10 @@
 .intro-slider__item img {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .swiper-pagination_intro {
@@ -464,6 +478,7 @@
     background-color: var(--white);
     border-radius: 8px;
     position: relative;
+    height: auto;
 }
 
 .furniture__photo {
@@ -517,6 +532,18 @@
     font-size: 24px;
     line-height: 100%;
     color: var(--gray900);
+    position: relative;
+}
+
+.furniture__new::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    width: 28px;
+    height: 28px;
+    transform: translateY(-50%);
+    background: url('../icons/bigrub.svg') no-repeat center;
 }
 
 .furniture__old {
@@ -574,10 +601,6 @@
 .swiper-button-next_furniture::after,
 .swiper-button-prev_furniture::after {
     content: '';
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    width: fit-content;
 }
 
 .swiper-button-next_furniture svg,
@@ -1095,19 +1118,31 @@
 
     /* Intro */
     .intro {
-        padding-top: 107px; 
         margin-bottom: 0;
+        min-height: 552px;
     }
 
-    .intro__wrapper {
+    .intro__block {
         max-width: 487px;
         padding-left: 100px;
         box-sizing: content-box;
     }
 
+    .intro__wrapper{
+        padding-top: 112px;
+    }
+
     .intro__title {
         margin-bottom: 34px;
         font-size: 48px;
+    }
+
+    .intro__buttons{
+        top: 427px;
+    }
+
+    .intro-pagination{
+        padding-left: 93px;
     }
 
     .intro__description {
@@ -1137,7 +1172,7 @@
     
     /* Furniture */
     .furniture {
-        padding-top: 90px;
+        padding-top: 130px;
         background-size: 73% 85%;
         background-color: #F7F7F7;
     }
@@ -1159,6 +1194,10 @@
     .inverted_furniture {
         top: 39px;
         right: -38px;
+    }
+
+    .furniture__new::before{
+        right: 93px;
     }
 
     .furniture__swiper {
@@ -1308,9 +1347,9 @@
         padding-bottom: 130px;
     }
 
-    .intro__wrapper {
+    .intro__block {
         padding-left: 89px;
-        width: 438px;
+        max-width: 438px;
     }
 
     .intro__button {
@@ -1398,6 +1437,10 @@
 
     .furniture__price {
         margin-bottom: 0;
+    }
+
+    .furniture__new::before{
+        right: 75px;
     }
 
    /*  About */
@@ -1505,7 +1548,7 @@
 }
 
 /* Adapting the width of 1024px */
-@media (min-width: 0px) and (max-width:1180px) {
+@media (max-width:1180px) {
 
     /* Header */
     .header__wrapper {
@@ -1522,12 +1565,28 @@
         padding-bottom: 115px;
     }
 
-    .intro__wrapper {
+    .intro__block {
         padding-left: 71px;
     }
 
     .intro__title  {
         margin-bottom: 29px;
+    }
+
+    .intro__wrapper{
+        padding-top: 114px;
+    }
+
+    .intro__block{
+        padding-left: 70px;
+    }
+
+    .intro__buttons{
+        top: 435px;
+    }
+
+    .intro-pagination{
+        padding-left: 66px;
     }
 
     .intro__description {
@@ -1543,7 +1602,7 @@
 
     .furniture__title {
         font-size: 24px;
-        width: 290px;
+        width: 256px;
         margin-left: 62px;
         margin-top: 147px;
     }
@@ -1562,6 +1621,10 @@
     }
 
     .furniture__buttons {
+        justify-content: end;
+    }
+
+    .swiper-pagination-furniture{
         justify-content: end;
     }
 
@@ -1634,26 +1697,135 @@
 }
 
 
+/* Adapting the width of 960px */
+@media (max-width: 1024px) {
+
+    /* Intro */
+    .intro__wrapper {
+        padding-top: 155px;
+    }
+
+    .intro__block {
+        padding-left: 0;
+    }
+
+    .intro-pagination{
+        padding-left: 0;
+    }
+
+    /* Furniture */
+
+    .furniture {
+        padding-top: 79px;
+        padding-bottom: 70px;
+    }
+
+    .furniture__swiper {
+        width: 867px;
+    }
+
+    .furniture__wrapper {
+        display: block;
+    }
+
+    .furniture__item {
+        padding: 14px;
+    }
+
+    .furniture__title {
+        margin-top: 0;
+        margin-left: 25px;
+        margin-bottom: 32px;
+        width: fit-content;
+    }
+
+    .furniture__buttons {
+        width: 100%;
+    }
+
+    .furniture__swiper {
+        margin-right: 74px;
+    }
+
+    .inverted_furniture {
+        top: 100px;
+        right: -14px;
+    }
+
+    .swiper-pagination-furniture{
+        justify-content: center;
+    }
+    .swiper-wrapper_furniture {
+        margin-bottom: 14px;
+    }
+
+    /* About */
+    .about__photo {
+        width: 321px;
+        height: 321px;
+    }
+
+    /* Catalog */
+    .catalog{
+        padding-top: 82px;
+        padding-bottom: 79px;
+    }
+
+    .catalog__list{
+        grid-template-rows: repeat(3, 218px);
+    }
+
+    /* Connection */
+    .connection__text{
+        width: 435px;
+    }
+
+    /* Footer */
+
+    .footer__info {
+        grid-column-gap: 20px;
+    }
+
+    .footer__logo{
+        width: 195px;
+        height: 50px;
+    }
+
+    .social__item{
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* Adapting the width of 768px */
 @media (max-width: 960px) {
     /* Intro */
     .intro {
-        padding-top: 117px;
-        padding-bottom: 116px;
+        min-height: 485px;
+    }
+
+    .intro__wrapper{
+        padding-top: 115px;
     }
 
     .intro__title {
         font-size: 32px;
-        font-size: 32px;
     }
 
-    .intro__wrapper {
+    .intro__block {
         max-width: 398px;
-        padding-left: 0;
+    }
+
+    .intro__title{
+        margin-bottom: 20px;
     }
 
     .intro__description {
         font-size: 14px;
+    }
+
+    .intro__buttons{
+        top: 352px;
     }
 
     /* Furniture */
@@ -1661,10 +1833,6 @@
         padding-top: 62px;
         padding-bottom: 54px;
         background-size: 100% 95%;
-    }
-
-    .furniture__wrapper{
-        display: block;
     }
 
     .furniture__swiper {
@@ -1675,20 +1843,12 @@
         font-weight: 500;
     }
 
-    .furniture__buttons {
-        width: 100%;
-        justify-content: center;
+    .furniture__title{
+        margin-left: 0;
     }
 
     .furniture__item {
         padding: 19px;
-    }
-
-    .furniture__title{
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 32px;
-        width: 100%;
     }
 
     .discount {
@@ -1796,7 +1956,7 @@
 
    /* Connection */
    .connection  {
-        margin-bottom: 123px;
+        margin-bottom: 161px;
    }
 
    .connection__wrapper {
@@ -1885,6 +2045,11 @@
     .furniture__background {
         height: 540px;
     }
+
+    .furniture__new::before{
+        right: 40px;
+    }
+
 
     /* About */
     .about {
@@ -2020,13 +2185,19 @@
 
     /* Intro */
     .intro  {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        min-height: 360px;
     }
 
-    .intro__wrapper {
+    .intro__wrapper{
+        padding-top: 60px;
+    }
+
+    .intro__buttons{
+        top: 282px;
+    }
+
+    .intro__block {
         max-width: 288px;
-        padding-left: 11px;
     }
 
     .intro__search {
@@ -2042,6 +2213,7 @@
     .intro__description {
         width: 100%;
         font-size: 12px;
+        margin-bottom: 22px;
     }
     
     /* Furniture */
@@ -2058,6 +2230,10 @@
 
     .furniture__photo {
         margin-bottom: 4px;
+    }
+
+    .furniture__new::before{
+        right: 87px;
     }
 
     .furniture__heart {
@@ -2267,8 +2443,7 @@
 
    /* Intro */
    .intro {
-        padding-top: 53px;
-        padding-bottom: 50px;
+        min-height: 400px;
    }
 
    .intro__title {
@@ -2276,13 +2451,20 @@
         margin-bottom: 12px;
    }
 
-   .intro__wrapper {
+   .intro__block {
         max-width: 266px;
-        padding-left: 0;
+   }
+
+   .intro__wrapper{
+        padding-top: 51px;
    }
 
    .intro__description  {
         margin-bottom: 25px;
+   }
+
+   .intro__buttons{
+        top: 333px;
    }
 
    .intro__button {
@@ -2322,6 +2504,14 @@
 
    .furniture__photo  {
         margin-bottom: 12px;
+   }
+
+   .furniture__buttons{
+        width: fit-content;
+   }
+
+   .furniture__new::before{
+        right: 50px;
    }
 
    /* Swiper */

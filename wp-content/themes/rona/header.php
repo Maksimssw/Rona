@@ -106,6 +106,11 @@
             </ul>
         </div>
         <div class="header__wrapper container">
+            <div class="hamburger">
+                <svg>
+                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#hamburger"></use>
+                </svg>                    
+            </div>
             <?php the_custom_logo(); ?>
             <button class="button button_catalog">
                 <span class="searсh__catalog">Каталог</span>
