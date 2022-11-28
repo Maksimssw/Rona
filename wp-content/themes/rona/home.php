@@ -161,8 +161,12 @@
             </div>
         </section>
         <section class="catalog container">
-            <ul class="catalog__list">
-            
+            <div class="catalog__wrapper">
+                <div class="inverted inverted_catalog">
+                    <p class="inverted__text">Каталог</p>
+                </div>
+                <ul class="catalog__list">
+                
                 <?php
                 global $post;
 
@@ -186,10 +190,8 @@
 
                 <?php }} wp_reset_postdata();?>
 
-                <div class="inverted inverted_catalog">
-                    <p class="inverted__text">Каталог</p>
-                </div>
             </ul>
+            </div>
         </section>
         <section class="connection container">
             <div class="connection__wrapper">
