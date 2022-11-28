@@ -31,11 +31,13 @@
                         <div class="intro__wrapper container">
                             <div class="intro__block">
                                 <h1 class="intro__title">
-                                    Уютный интерьер вместе с    
-                                    <span>РоНа</span>
+                                    <?php the_field('intro-title'); ?>    
+                                    <span><?php the_field('intro-title-green'); ?></span>
                                 </h1>
-                                <p class="intro__description">Наш магазин - это необходимый инструмент, для того чтобы превратить Ваш дом в мечту!</p>
-                                <a href="#" class="intro__button button-green">Перейти в каталог</a>
+                                <p class="intro__description"><?php the_field('intro-description'); ?></p>
+                                <a href="<?php the_field('intro-button-link'); ?>" class="intro__button button-green">
+                                    <?php the_field('intro-button-text'); ?>
+                                </a>
                             </div>
                         </div>
                         <img src="<?php the_field('slider-main-image'); ?>" alt="sofa">
@@ -207,34 +209,34 @@
                         </p>
                         <ul class="connection__list">
                             <li class="connection__item">
-                                <address class="connection__link">ул. Подвойского, 30А, Тихорецк, Россия</address>
+                                <address class="connection__link"><?php the_field('address');?></address>
                             </li>
                             <li class="connection__item">
-                                <a href="tel:+89898549917" class="connection__link">8 (989) 854-99-17</a>
+                                <a href="tel:+<?php the_field('clean-phone');?>" class="connection__link"><?php the_field('phone');?></a>
                             </li>
                             <li class="connection__item">
-                                <a href="mailto:rona.mebel.ru@gmail.com" class="connection__link">rona.mebel.ru@gmail.com</a>
+                                <a href="mailto:<?php the_field('email-link');?>" class="connection__link"><?php the_field('email-link');?></a>
                             </li>
                         </ul>
                     </div>
                     <div class="connection__links">
                         <ul class="social">
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="<?php the_field('instagram-link');?>" class="social__link">
                                     <svg>
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#instagram"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="<?php the_field('vk-link');?>" class="social__link">
                                     <svg>
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#vk"></use>
                                     </svg>                                       
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="<?php the_field('whatsApp-link');?>" class="social__link">
                                     <svg>
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#whatsApp"></use>
                                     </svg>                                        

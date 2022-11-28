@@ -10,21 +10,21 @@
                 <a href="#" class="footer__politics">Политика конфиденциальности</a>
                 <ul class="social">
                     <li class="social__item">
-                        <a href="#" class="social__link social__link_footer">
+                        <a href="<?php the_field('instagram-link');?>" class="social__link social__link_footer">
                             <svg>
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item">
-                        <a href="#" class="social__link social__link_footer">
+                        <a href="<?php the_field('vk-link');?>" class="social__link social__link_footer">
                             <svg>
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#vk"></use>
                             </svg>                                       
                         </a>
                     </li>
                     <li class="social__item">
-                        <a href="#" class="social__link social__link_footer">
+                        <a href="<?php the_field('whatsApp-link');?>" class="social__link social__link_footer">
                             <svg>
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#whatsApp"></use>
                             </svg>                                      
@@ -57,13 +57,13 @@
                     <h3 class="information__title">Контакты</h3>
                     <ul class="information__list information__list_contact">
                         <li class="information__item information__item_contact">
-                            <a href="mailto:rona.mebel.ru@gmail.com" class="information__link">rona.mebel.ru@gmail.com</a>
+                            <a href="mailto:<?php the_field('email-link');?>" class="information__link"><?php the_field('email-link');?></a>
                         </li>
                         <li class="information__item information__item_contact">
-                            <a href="te:89898549917" class="information__link">8 (989) 854-99-17</a>
+                            <a href="te:<?php the_field('phone');?>" class="information__link"><?php the_field('phone');?></a>
                         </li>
                         <li class="information__item information__item_contact">
-                            <address class="information__link">Краснодарский край, г.Тихорецк</address>
+                            <address class="information__link"><?php the_field('address');?></address>
                         </li>
                     </ul>
                 </div>
@@ -71,13 +71,13 @@
                     <h3 class="information__title">Реквизиты</h3>
                     <ul class="information__list">
                         <li class="information__item">
-                            <p href="mailto:rona.mebel.ru@gmail.com" class="information__link">ИП Иванов И. И.</p>
+                            <p class="information__link">ИП <?php the_field('footer-ep');?></p>
                         </li>
                         <li class="information__item">
-                            <p href="te:89898549917" class="information__link">ИНН 000000000000</з>
+                            <p class="information__link">ИНН <?php the_field('footer-inn');?></p>
                         </li>
                         <li class="information__item">
-                            <address class="information__link">ОРГН 0000000000000</address>
+                            <address class="information__link">ОРГН <?php the_field('footer-ogrn');?></address>
                         </li>
                     </ul>
                 </div>
