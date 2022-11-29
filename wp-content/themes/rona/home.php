@@ -45,13 +45,13 @@
 
                 <?php }} wp_reset_postdata();?>
                 </div>
-                <button class="swiper-button-prev intro-button-prev">
-                    <svg>
+                <button class="swiper-button-prev intro-button-prev slider-button-left">
+                    <svg class="icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg>
                 </button>
-                <button class="swiper-button-next intro-button-next">
-                    <svg>
+                <button class="swiper-button-next intro-button-next slider-button-right">
+                    <svg class="icon"> 
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg> 
                 </button>
@@ -66,7 +66,7 @@
                     <div class="inverted__line"></div>
                     <p class="inverted__text">Популярное</p>
                 </div>
-                <h2 class="furniture__title">
+                <h2 class="furniture__title title">
                     <?php the_field('popular-product-title'); ?>
                 </h2>
                 <div class="swiper furniture__swiper">
@@ -89,11 +89,11 @@
                             <a href="#">
                                 <div class="furniture__photo">
                                     <img src="<?php the_field('popular-slider-image'); ?>" alt="furniture">
-                                    <div class="furniture__heart">
-                                        <svg>
+                                    <button class="furniture__heart">
+                                        <svg class="icon">
                                             <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
                                         </svg> 
-                                    </div>
+                                    </button>
                                 </div>
                                 <h3 class="furniture__heading">
                                     <?php the_field('description-product'); ?>
@@ -111,14 +111,14 @@
                             
                     </div>
                     <div class="furniture__buttons">
-                        <button class="swiper-button-prev swiper-button-prev_furniture">
-                            <svg>
+                        <button class="swiper-button-prev slider-button-left swiper-button-prev_furniture">
+                            <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
                         <div class="swiper-pagination-furniture"></div>
-                        <button class="swiper-button-next swiper-button-next_furniture">
-                            <svg>
+                        <button class="swiper-button-next slider-button-right swiper-button-next_furniture">
+                            <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
@@ -133,33 +133,31 @@
                 </div>
                 <div class="about__info">
                     <div class="about__text">
-                        <h2 class="about__title"><?php the_field('about-title'); ?></h2>
+                        <h2 class="about__title title"><?php the_field('about-title'); ?></h2>
                         <p class="about__description"><?php the_field('about-description'); ?></p>
                     </div>
                     <ul class="progress">
-                        <li class="progress__item">
-                            <h3 class="progress__number">
+                        <li>
+                            <span class="progress__number">
                                 <?php the_field('about-experience'); ?>
-                            </h3>
+                            </span>
                             <p class="progress__text">Лет работы магазина</p>
                         </li>
-                        <li class="progress__item">
-                            <h3 class="progress__number">
+                        <li>
+                            <span class="progress__number">
                                 <?php the_field('about-customers'); ?>
-                            </h3>
+                            </span>
                             <p class="progress__text">Довольных клиентов</p>
                         </li>
-                        <li class="progress__item">
-                            <h3 class="progress__number">
+                        <li>
+                            <span class="progress__number">
                                 <?php the_field('about-product'); ?>
-                            </h3>
+                            </span>
                             <p class="progress__text">Товаров в каталоге</p>
                         </li>
                     </ul>
                 </div>
-                <div class="about__photo">
-                    <img src="<?php the_field('about-image'); ?>" alt="about">
-                </div>
+                <img src="<?php the_field('about-image'); ?>" class="about__photo" alt="about">
             </div>
         </section>
         <section class="catalog container">
@@ -183,11 +181,13 @@
                 ?>
 
                 <li class="catalog__item">
-                    <img src="<?php the_field('catalog-image'); ?>" alt="<?php the_field('catalog-title');?>">
-                    <div class="catalog__text">
-                        <h4 class="catalog__title"><?php the_field('catalog-title');?></h4>
-                        <a href="<?php the_field('catalog-link');?>" class="catalog__link text-base100 text-base100_medium">Подробнее</a>
-                    </div>
+                    <a href="#">
+                        <img src="<?php the_field('catalog-image'); ?>" alt="<?php the_field('catalog-title');?>">
+                        <div class="catalog__text">
+                            <h4 class="catalog__title"><?php the_field('catalog-title');?></h4>
+                            <a href="<?php the_field('catalog-link');?>" class="catalog__link text-base100 text-base100_medium">Подробнее</a>
+                        </div>
+                    </a>
                 </li>
 
                 <?php }} wp_reset_postdata();?>
@@ -201,9 +201,9 @@
                     <p class="inverted__text">Контакты</p>
                 </div>
                 <div class="connection__map"></div>
-                <div class="connection__text">
+                <div class="connection__cover">
                     <div class="connection__info">
-                        <h2 class="connection__title">Остались вопросы?</h2>
+                        <h2 class="connection__title title">Остались вопросы?</h2>
                         <p class="connection__description">
                             Вы можете связаться с нам, позвонив по номеру или написав нам на электронную почту.
                         </p>
@@ -223,21 +223,21 @@
                         <ul class="social">
                             <li class="social__item">
                                 <a href="<?php the_field('instagram-link');?>" class="social__link">
-                                    <svg>
+                                    <svg class="icon">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#instagram"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="<?php the_field('vk-link');?>" class="social__link">
-                                    <svg>
+                                    <svg class="icon">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#vk"></use>
                                     </svg>                                       
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="<?php the_field('whatsApp-link');?>" class="social__link">
-                                    <svg>
+                                    <svg class="icon">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#whatsApp"></use>
                                     </svg>                                        
                                 </a>
