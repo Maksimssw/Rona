@@ -208,7 +208,7 @@
                 <div class="inverted inverted_connection">
                     <p class="inverted__text">Контакты</p>
                 </div>
-                <div class="connection__map"></div>
+                <div id="map" class="connection__map"></div>
                 <div class="connection__cover">
                     <div class="connection__info">
                         <h2 class="connection__title title">Остались вопросы?</h2>
