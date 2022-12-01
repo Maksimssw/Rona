@@ -334,6 +334,10 @@ input {
     height: 20px;
 }
 
+.telephone__icon svg {
+    fill: var(--white);
+}
+
 .telephone__number {
     font-weight: 400;
     color: var(--white);
@@ -693,16 +697,16 @@ input {
     height: 32px;
 }
 
-.social__link svg {
-    fill: var(--gray400);
-}
-
 .social__link:hover svg {
     fill: var( --green600 );
 }
 
 .social__link_footer svg {
     fill: var(--white);
+}
+
+.social__link svg {
+    fill: var(--gray400);
 }
 
 @media (max-width:1920px) {

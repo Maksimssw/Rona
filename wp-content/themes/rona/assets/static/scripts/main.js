@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "../src/static/scripts/modules/formContacts.js":
+/*!*****************************************************!*\
+  !*** ../src/static/scripts/modules/formContacts.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst formContacts = () => {\r\n    // Getting all input\r\n    const inputs = document.querySelectorAll('.form__input .input');\r\n\r\n    // Busting each input\r\n    inputs.forEach(input => {\r\n        input.addEventListener('input', () => {\r\n            // getting the value and wrapper\r\n            const value = input.value;\r\n            let wrapper = input.closest('.form__input');\r\n\r\n            // Changing Styles\r\n            if(value !== ''){\r\n                wrapper.classList.add('active');\r\n            } else {\r\n                wrapper.classList.remove('active');\r\n            }\r\n        });\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formContacts);\n\n//# sourceURL=webpack:///../src/static/scripts/modules/formContacts.js?");
+
+/***/ }),
+
 /***/ "../src/static/scripts/modules/heart.js":
 /*!**********************************************!*\
   !*** ../src/static/scripts/modules/heart.js ***!
@@ -17,6 +27,16 @@
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst heart = () =>{\r\n    // Get all the hearts\r\n    const hearts = document.querySelectorAll('.furniture__heart');\r\n\r\n    // When pressing on the heart , it becomes active.\r\n    hearts.forEach(el => {\r\n        el.addEventListener('click', () => {\r\n            if(el.classList.contains('active')){\r\n                el.classList.remove('active')\r\n            } else {\r\n                el.classList.add('active');\r\n            }\r\n        });\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (heart);\n\n//# sourceURL=webpack:///../src/static/scripts/modules/heart.js?");
+
+/***/ }),
+
+/***/ "../src/static/scripts/modules/map.js":
+/*!********************************************!*\
+  !*** ../src/static/scripts/modules/map.js ***!
+  \********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst map = () => {\r\n\r\n    let center = [45.849355106043596,40.13087151421415]\r\n\r\n    function init(){\r\n        let map = new ymaps.Map('map', {\r\n            center: center,\r\n            zoom: 17 \r\n        });\r\n\r\n        let placemark = new ymaps.Placemark(center, {}, {\r\n         \r\n        });\r\n\r\n        map.controls.remove('geolocationControl'); \r\n        map.controls.remove('searchControl');\r\n        map.controls.remove('trafficControl'); \r\n        map.controls.remove('typeSelector');\r\n        map.controls.remove('fullscreenControl'); \r\n        map.controls.remove('zoomControl'); \r\n        map.controls.remove('rulerControl'); \r\n        map.behaviors.disable(['scrollZoom']); \r\n        map.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки, всё ок.\r\n        map.behaviors.disable('multiTouch'); // — это отключает зум щипком, не очень нужно. \r\n        map.behaviors.disable('drag'); // —\r\n        map.geoObjects.add(placemark);\r\n    }\r\n\r\n    ymaps.ready(init);\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (map);\n\n//# sourceURL=webpack:///../src/static/scripts/modules/map.js?");
 
 /***/ }),
 
@@ -46,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders.js */ \"../src/static/scripts/modules/sliders.js\");\n/* harmony import */ var _modules_oldPrice_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/oldPrice.js */ \"../src/static/scripts/modules/oldPrice.js\");\n/* harmony import */ var _modules_heart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heart.js */ \"../src/static/scripts/modules/heart.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n\r\n    (0,_modules_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_modules_oldPrice_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    (0,_modules_heart_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\r\n    /* Map */\r\n    google.maps.event.addDomListener(window, 'load', init);\r\n\r\n    function init() {\r\n        var mapOptions = {\r\n            zoom: 11,\r\n\r\n            center: new google.maps.LatLng(40.6700, -73.9400), // New York\r\n\r\n            styles: [{\"featureType\":\"all\",\"elementType\":\"labels.text\",\"stylers\":[{\"color\":\"#878787\"}]},{\"featureType\":\"all\",\"elementType\":\"labels.text.stroke\",\"stylers\":[{\"visibility\":\"off\"}]},{\"featureType\":\"landscape\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#f9f5ed\"}]},{\"featureType\":\"road.highway\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#f5f5f5\"}]},{\"featureType\":\"road.highway\",\"elementType\":\"geometry.stroke\",\"stylers\":[{\"color\":\"#c9c9c9\"}]},{\"featureType\":\"water\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#aee0f4\"}]}]\r\n        };\r\n\r\n        var mapElement = document.querySelector('.connection__map');\r\n\r\n        var map = new google.maps.Map(mapElement, mapOptions);\r\n\r\n        var marker = new google.maps.Marker({\r\n            position: new google.maps.LatLng(40.6700, -73.9400),\r\n            map: map,\r\n            title: 'Snazzy!'\r\n        });\r\n    }\r\n});\n\n//# sourceURL=webpack:///../src/static/scripts/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders.js */ \"../src/static/scripts/modules/sliders.js\");\n/* harmony import */ var _modules_oldPrice_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/oldPrice.js */ \"../src/static/scripts/modules/oldPrice.js\");\n/* harmony import */ var _modules_heart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heart.js */ \"../src/static/scripts/modules/heart.js\");\n/* harmony import */ var _modules_formContacts_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/formContacts.js */ \"../src/static/scripts/modules/formContacts.js\");\n/* harmony import */ var _modules_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/map.js */ \"../src/static/scripts/modules/map.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n\r\n    try{\r\n        (0,_modules_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n        (0,_modules_oldPrice_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n        (0,_modules_heart_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n    }catch{}\r\n    \r\n    try{\r\n        (0,_modules_formContacts_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n        (0,_modules_map_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n    } catch{}\r\n\r\n    /* Map */\r\n    /* google.maps.event.addDomListener(window, 'load', init);\r\n\r\n    function init() {\r\n        var mapOptions = {\r\n            zoom: 11,\r\n\r\n            center: new google.maps.LatLng(40.6700, -73.9400), // New York\r\n\r\n            styles: [{\"featureType\":\"all\",\"elementType\":\"labels.text\",\"stylers\":[{\"color\":\"#878787\"}]},{\"featureType\":\"all\",\"elementType\":\"labels.text.stroke\",\"stylers\":[{\"visibility\":\"off\"}]},{\"featureType\":\"landscape\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#f9f5ed\"}]},{\"featureType\":\"road.highway\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#f5f5f5\"}]},{\"featureType\":\"road.highway\",\"elementType\":\"geometry.stroke\",\"stylers\":[{\"color\":\"#c9c9c9\"}]},{\"featureType\":\"water\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#aee0f4\"}]}]\r\n        };\r\n\r\n        var mapElement = document.querySelector('.connection__map');\r\n\r\n        var map = new google.maps.Map(mapElement, mapOptions);\r\n\r\n        var marker = new google.maps.Marker({\r\n            position: new google.maps.LatLng(40.6700, -73.9400),\r\n            map: map,\r\n            title: 'Snazzy!'\r\n        });\r\n    } */\r\n});\n\n//# sourceURL=webpack:///../src/static/scripts/script.js?");
 
 /***/ })
 
@@ -111,7 +131,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	__webpack_require__("../src/static/scripts/script.js");
+/******/ 	__webpack_require__("../src/static/scripts/modules/formContacts.js");
 /******/ 	__webpack_require__("../src/static/scripts/modules/heart.js");
+/******/ 	__webpack_require__("../src/static/scripts/modules/map.js");
 /******/ 	__webpack_require__("../src/static/scripts/modules/oldPrice.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("../src/static/scripts/modules/sliders.js");
 /******/ 	

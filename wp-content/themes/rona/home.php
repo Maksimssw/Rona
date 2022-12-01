@@ -251,7 +251,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="#" class="connection__write">Написать нам</a>
+                        <a href="<?php bloginfo('template_url');?>/contacts" class="connection__write">Написать нам</a>
                     </div>
                 </div>
             </div>
