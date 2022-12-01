@@ -215,7 +215,7 @@
                         <p class="connection__description">
                             Вы можете связаться с нам, позвонив по номеру или написав нам на электронную почту.
                         </p>
-                        <ul class="connection__list">
+                        <ul>
                             <li class="connection__item">
                                 <svg class="icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>

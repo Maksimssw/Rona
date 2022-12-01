@@ -595,10 +595,6 @@
     margin-bottom: 50px;
 }
 
-.connection__list {
-    padding-left: 32px;
-}
-
 .connection__item {
     margin-bottom: 20px;
     display: flex;
@@ -971,10 +967,6 @@
         margin-bottom: 36px;
     }
 
-    .connection__list {
-        padding-left: 20px;
-    }
-
     .connection__item {
         margin-bottom: 12px;
     }
@@ -1095,10 +1087,6 @@
 
     .connection__description {
         width: 310px;
-    }
-
-    .connection__list {
-        padding-left: 28px;
     }
 
     .connection__links {

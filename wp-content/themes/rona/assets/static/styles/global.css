@@ -620,13 +620,12 @@ input {
     font-family: 'Open Sans', sans-serif;
 }
 
-.information__list_contact {
-    padding-left: 30px;
-}
-
 .information__item {
     margin-bottom: 8px;
     position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
 .information__item:last-child {
@@ -642,19 +641,15 @@ input {
     font-style: normal;
 }
 
+.icon-information{
+    width: 20px;
+    height: 20px;
+    fill: var(--gray200);
+}
+
 .information__link:hover {
     color: var(--gray100);
     transform: translateX(-5px);
-}
-
-.information__item_contact::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: -30px;
-    transform: translateY(-50%);
 }
 
 .information__requisite:hover{
@@ -667,17 +662,6 @@ input {
     color: var(--gray300);
 }
 
-.information__item_contact:nth-child(1)::after {
-    background: url('../icons/mail.svg') no-repeat center;
-}
-
-.information__item_contact:nth-child(2)::after {
-    background: url('../icons/phone.svg') no-repeat center;
-}
-
-.information__item_contact:nth-child(3)::after {
-    background: url('../icons/lokationWhite.svg') no-repeat center;
-}
 
 /* Social */
 .social {

@@ -57,12 +57,21 @@
                     <h3 class="information__title">Контакты</h3>
                     <ul class="information__list information__list_contact">
                         <li class="information__item information__item_contact">
+                            <svg class="icon-information">
+                                <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
+                            </svg>   
                             <a href="mailto:<?php the_field('email-link');?>" class="information__link"><?php the_field('email-link');?></a>
                         </li>
                         <li class="information__item information__item_contact">
+                            <svg class="icon-information">
+                                <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
+                            </svg>   
                             <a href="te:<?php the_field('phone');?>" class="information__link"><?php the_field('phone');?></a>
                         </li>
                         <li class="information__item information__item_contact">
+                            <svg class="icon-information">
+                                <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
+                            </svg>   
                             <address class="information__link information__address"><?php the_field('address');?></address>
                         </li>
                     </ul>
