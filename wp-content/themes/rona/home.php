@@ -217,12 +217,21 @@
                         </p>
                         <ul class="connection__list">
                             <li class="connection__item">
+                                <svg class="icon-connection">
+                                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
+                                </svg>
                                 <address class="connection__link"><?php the_field('address');?></address>
                             </li>
                             <li class="connection__item">
+                                <svg class="icon-connection">
+                                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
+                                </svg>
                                 <a href="tel:+<?php the_field('clean-phone');?>" class="connection__link"><?php the_field('phone');?></a>
                             </li>
                             <li class="connection__item">
+                                <svg class="icon-connection">
+                                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
+                                </svg>
                                 <a href="mailto:<?php the_field('email-link');?>" class="connection__link"><?php the_field('email-link');?></a>
                             </li>
                         </ul>
@@ -251,7 +260,12 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="<?php bloginfo('template_url');?>/contacts" class="connection__write">Написать нам</a>
+                        <a href="<?php bloginfo('template_url');?>/contacts" class="connection__write">
+                            Написать нам
+                            <svg class="incon-arrow">
+                                <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#arrow"></use>
+                            </svg>  
+                        </a>
                     </div>
                 </div>
             </div>

@@ -601,6 +601,9 @@
 
 .connection__item {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
     position: relative;
 }
 
@@ -619,26 +622,10 @@
     font-style: normal;
 }
 
-.connection__item::after {
-    content: '';
+.icon-connection{
+    fill: var(--orange500);
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 50%;
-    left: -28px;
-    transform: translateY(-50%);
-}
-
-.connection__item:nth-child(1)::after {
-    background: url('../icons/lokation.svg') no-repeat center;
-}
-
-.connection__item:nth-child(2)::after {
-    background: url('../icons/phoneOrange.svg') no-repeat center;
-}
-
-.connection__item:nth-child(3)::after {
-    background: url('../icons/mailOrange.svg') no-repeat center;
 }
 
 .connection__links {
