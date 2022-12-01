@@ -529,11 +529,16 @@ input {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+    width: max-content;
 }
 
 .info__rub {
     width: 16px;
     height: 16px;  
+}
+
+.info__rub svg {
+    fill: var(--gray800);
 }
 
 /* Footer */
@@ -651,6 +656,11 @@ input {
 .information__requisite:hover{
     color: var(--gray300);
     transform: translateX(0);
+}
+
+.information__address:hover{
+    transform: translateX(0);
+    color: var(--gray300);
 }
 
 .information__item_contact:nth-child(1)::after {

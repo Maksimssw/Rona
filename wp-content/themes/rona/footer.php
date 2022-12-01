@@ -63,7 +63,7 @@
                             <a href="te:<?php the_field('phone');?>" class="information__link"><?php the_field('phone');?></a>
                         </li>
                         <li class="information__item information__item_contact">
-                            <address class="information__link"><?php the_field('address');?></address>
+                            <address class="information__link information__address"><?php the_field('address');?></address>
                         </li>
                     </ul>
                 </div>

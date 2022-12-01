@@ -56,7 +56,9 @@
                     </svg> 
                 </button>
                 <div class="intro__buttons container">
-                    <div class="swiper-pagination intro-pagination"></div>
+                    <div class="intro-pagination-wrapper">
+                        <div class="swiper-pagination intro-pagination"></div>
+                    </div>
                 </div> 
             </div>
         </section>
@@ -100,9 +102,15 @@
                                 </h3>
                                 <span class="furniture__new">
                                     <?php the_field('popular-slider-price'); ?>
+                                    <svg class="icon-new-ruble">
+                                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
+                                    </svg>
                                 </span>
                                 <span class="furniture__old">
                                     <?php the_field('popular-slider-old-price'); ?>
+                                    <svg class="icon-old-ruble">
+                                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
+                                    </svg>
                                 </span>
                             </a>
                         </div>
@@ -184,8 +192,8 @@
                     <a href="#">
                         <img src="<?php the_field('catalog-image'); ?>" alt="<?php the_field('catalog-title');?>">
                         <div class="catalog__text">
-                            <h4 class="catalog__title"><?php the_field('catalog-title');?></h4>
-                            <a href="<?php the_field('catalog-link');?>" class="catalog__link text-base100 text-base100_medium">Подробнее</a>
+                            <span class="catalog__title"><?php the_field('catalog-title');?></span>
+                            <span class="catalog__link">Подробнее</span>
                         </div>
                     </a>
                 </li>
