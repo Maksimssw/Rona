@@ -96,6 +96,10 @@ ul li {
     list-style-type: none;
 }
 
+br{
+    display: none;
+}
+
 body {
     font-family: 'OpenSans', sans-serif;
 }

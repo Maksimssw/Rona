@@ -140,23 +140,7 @@
                     <div class="form">
                         <h2 class="form__title">Связаться с нами</h2>
                         <form action="#" class="form__wrapper">
-                            <div class="form__input">
-                                <span class="form__placeholder">ФИО</span>
-                                <input type="text" class="input" name="name">
-                            </div>
-                            <div class="form__input">
-                                <span class="form__placeholder">Телефон</span>
-                                <input type="tel" class="input"name="phone">
-                            </div>
-                            <div class="form__input">
-                                <span class="form__placeholder">E-mail</span>
-                                <input type="email" class="input" name="mail">
-                            </div>
-                            <div class="form__input">
-                                <span class="form__placeholder">Сообщение</span>
-                                <textarea class="form__textarea input" type="text" name="message"></textarea>
-                            </div>
-                            <button class="button button_message">Отправить сообщение</button>
+                            <?php echo do_shortcode('[contact-form-7 id="277" title="Contact form"]') ?>
                         </form>
                     </div>
                 </div>

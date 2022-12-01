@@ -193,7 +193,12 @@
                         <img src="<?php the_field('catalog-image'); ?>" alt="<?php the_field('catalog-title');?>">
                         <div class="catalog__text">
                             <span class="catalog__title"><?php the_field('catalog-title');?></span>
-                            <span class="catalog__link">Подробнее</span>
+                            <span class="catalog__link">
+                                Подробнее
+                                <svg class="icon-catalog">
+                                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </span>
                         </div>
                     </a>
                 </li>
