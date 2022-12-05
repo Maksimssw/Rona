@@ -14,64 +14,62 @@
         <div class="heading container">
             <div class="contacts">
                 <ul class="contacts__list">
-                    <li class="contacts__item">
-                        <a href="<?php the_field('instagram-link'); ?>" class="contacts__link">
-                            <svg class="icon">
+                    <li>
+                        <a href="<?php the_field('instagram-link'); ?>">
+                            <svg class="icon-middle contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts__item">
-                        <a href="<?php the_field('vk-link'); ?>" class="contacts__link">
-                            <svg class="icon">
+                    <li>
+                        <a href="<?php the_field('vk-link'); ?>">
+                            <svg class="icon-middle contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#vk"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts__item">
-                        <a href="<?php the_field('whatsApp-link'); ?>" class="contacts__link">
-                            <svg class="icon">
+                    <li>
+                        <a href="<?php the_field('whatsApp-link'); ?>">
+                            <svg class="icon-middle contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#whatsApp"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts__item">
-                        <a href="mailto:<?php the_field('email-link'); ?>" class="contacts__link">
-                            <svg class="icon"> 
+                    <li>
+                        <a href="mailto:<?php the_field('email-link'); ?>">
+                            <svg class="icon-middle contacts__icon"> 
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
                 <div class="telephone">
-                    <div class="telephone__icon">
-                        <svg class="icon">
-                            <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
-                        </svg>
-                    </div>
-                    <a href="tel:<?php the_field('clean-phone'); ?>" class="telephone__number text-sm100">
+                    <svg class="icon-middle telephone__icon">
+                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <a href="tel:<?php the_field('clean-phone'); ?>" class="telephone__number">
                         <?php the_field('phone'); ?>
                     </a>
                 </div>
             </div>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item">
+                    <li>
                         <a href="#" class="navigation__link">
                             О нас
                         </a>
                     </li>
-                    <li class="navigation__item">
+                    <li>
                         <a href="#" class="navigation__link">
                             Доставка и возврат
                         </a>
                     </li>
-                    <li class="navigation__item">
+                    <li>
                         <a href="#" class="navigation__link">
                             Вызов замерщика
                         </a>
                     </li>
-                    <li class="navigation__item">
+                    <li>
                         <a href="#" class="navigation__link">
                             Гипермаркет “РоНа”
                         </a>
@@ -80,11 +78,9 @@
             </nav>
             <div class="user">
                 <p class="user__text">Петенков Д. А.</p>
-                <div class="user__arrow">
-                    <svg class="icon">
-                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
-                    </svg>
-                </div>
+                <svg class="icon-little user__icon">
+                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
+                </svg>
             </div>
         </div>
         <div class="header__wrapper container">
@@ -94,35 +90,32 @@
                 </svg>                    
             </div>
             <?php the_custom_logo(); ?>
-            <button class="button button_catalog">
-                <span class="searсh__catalog">Каталог</span>
-                <span class="searсh__burger">
-                    <svg class="icon">
+            <div class="searсh">
+                <button class="button button_catalog">
+                    <span>Каталог</span>
+                    <svg class="icon-big catalog-icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#hamburger"></use>
-                    </svg>  
-                </span>
-            </button>
-            <form action="#" class="searсh">
-                <div class="searсh__wrapper">
+                    </svg> 
+                </button>
+                <form action="#" class="searсh__wrapper">
                     <div class="search__block">
                         <input type="text" name="search" placeholder="Введите название товара" class="search__input">
+                        <svg class="searсh__icon">
+                            <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#searсh"></use>
+                        </svg> 
                     </div>
                     <button class="button searсh__find">
                         Найти
                     </button>
-                </div>
-            </form>
+                </form>
+            </div>
             <div class="info">
-                <div class="info__heart active info-icon">
-                    <svg class="icon">
-                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
-                    </svg>  
-                </div>
-                <div class="info__basket active info-icon">
-                    <svg class="icon">
-                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#basket"></use>
-                    </svg>
-                </div>
+                <svg class="icon-big info__icon">
+                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
+                </svg>  
+                <svg class="icon-big info__icon">
+                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#basket"></use>
+                </svg>
                 <div class="info__score">
                     <p>456 000</p>
                     <div class="info__rub">

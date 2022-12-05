@@ -8,20 +8,20 @@
     <?php get_header(); ?>
 
     <main>
-        <nav class="way container">
-            <ul class="way__list">
-                <li class="way__item">
-                    <a href="index.html" class="way__link">
+        <nav class="breadcrumb container">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="/rona" class="breadcrumb__link">
                         Главная 
                     </a>
                     <svg class="icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg>
                 </li>
-                <li class="way__item">
-                    <a href="#" class="way__link way__active">
+                <li class="breadcrumb__item">
+                    <span href="#" class="breadcrumb__link breadcrumb__active">
                         Контакты 
-                    </a>
+                    </span>
                 </li>
             </ul>
         </nav>
@@ -91,30 +91,30 @@
                         </li>
                     </ul>
                 </aside>
-                <div class="bond">
-                    <h1 class="bond__title"><?php the_field('contacts-title');?></h1>
-                    <p class="bond__description"><?php the_field('contacts-description');?></p>
-                    <ul class="bond__list">
-                        <li class="bond__item">
-                            <svg class="icon-bond">
+                <div class="feedback">
+                    <h1 class="feedback__title"><?php the_field('contacts-title');?></h1>
+                    <p class="feedback__description"><?php the_field('contacts-description');?></p>
+                    <ul class="feedback__list">
+                        <li class="feedback__item">
+                            <svg class="icon-feedback">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
                             </svg>
-                            <a href="tel:<?php the_field('clean-phone');?>" class="bond__link"><?php the_field('phone');?></a>
+                            <a href="tel:<?php the_field('clean-phone');?>" class="feedback__link"><?php the_field('phone');?></a>
                         </li>
-                        <li class="bond__item">
-                            <svg class="icon-bond">
+                        <li class="feedback__item">
+                            <svg class="icon-feedback">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
                             </svg>
-                            <a href="mailto:<?php the_field('email-link');?>" class="bond__link"><?php the_field('email-link');?></a>
+                            <a href="mailto:<?php the_field('email-link');?>" class="feedback__link"><?php the_field('email-link');?></a>
                         </li>
-                        <li class="bond__item">
-                            <svg class="icon-bond">
+                        <li class="feedback__item">
+                            <svg class="icon-feedback">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
                             </svg>
-                            <address class="bond__link"><?php the_field('address');?></address>
+                            <address class="feedback__link"><?php the_field('address');?></address>
                         </li>
                     </ul>
-                    <ul class="social social_bond">
+                    <ul class="social social_feedback">
                         <li class="social__item">
                             <a href="<?php the_field('instagram-link');?>" class="social__link social__link_footer">
                                 <svg class="icon icon_green">
@@ -139,9 +139,7 @@
                     </ul>
                     <div class="form">
                         <h2 class="form__title">Связаться с нами</h2>
-                        <form action="#" class="form__wrapper">
-                            <?php echo do_shortcode('[contact-form-7 id="277" title="Contact form"]') ?>
-                        </form>
+                        <?php echo do_shortcode('[contact-form-7 id="277" title="Contact form"]') ?>
                     </div>
                 </div>
                 <div id="map" class="hero__map">

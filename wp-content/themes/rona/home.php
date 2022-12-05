@@ -46,12 +46,12 @@
                 <?php }} wp_reset_postdata();?>
                 </div>
                 <button class="swiper-button-prev intro-button-prev slider-button-left">
-                    <svg class="icon">
+                    <svg class="icon-big">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg>
                 </button>
                 <button class="swiper-button-next intro-button-next slider-button-right">
-                    <svg class="icon"> 
+                    <svg class="icon-big"> 
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg> 
                 </button>
@@ -92,7 +92,7 @@
                                 <div class="furniture__photo">
                                     <img src="<?php the_field('popular-slider-image'); ?>" alt="furniture">
                                     <button class="furniture__heart">
-                                        <svg class="icon">
+                                        <svg class="icon-little">
                                             <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
                                         </svg> 
                                     </button>
@@ -100,13 +100,13 @@
                                 <h3 class="furniture__heading">
                                     <?php the_field('description-product'); ?>
                                 </h3>
-                                <span class="furniture__new">
+                                <span class="furniture__discount">
                                     <?php the_field('popular-slider-price'); ?>
                                     <svg class="icon-new-ruble">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
                                     </svg>
                                 </span>
-                                <span class="furniture__old">
+                                <span class="furniture__price">
                                     <?php the_field('popular-slider-old-price'); ?>
                                     <svg class="icon-old-ruble">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
@@ -120,13 +120,13 @@
                     </div>
                     <div class="furniture__buttons">
                         <button class="swiper-button-prev slider-button-left swiper-button-prev_furniture">
-                            <svg class="icon">
+                            <svg class="icon-big">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
                         <div class="swiper-pagination-furniture"></div>
                         <button class="swiper-button-next slider-button-right swiper-button-next_furniture">
-                            <svg class="icon">
+                            <svg class="icon-big">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
@@ -169,6 +169,7 @@
             </div>
         </section>
         <section class="catalog container">
+            <h2 class="visually-hidden">Каталог</h2>
             <div class="catalog__wrapper">
                 <div class="inverted inverted_catalog">
                     <p class="inverted__text">Каталог</p>
@@ -220,21 +221,21 @@
                         <p class="connection__description">
                             Вы можете связаться с нам, позвонив по номеру или написав нам на электронную почту.
                         </p>
-                        <ul>
+                        <ul class="connection__list">
                             <li class="connection__item">
-                                <svg class="icon-connection">
+                                <svg class="icon-big icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
                                 </svg>
                                 <address class="connection__link"><?php the_field('address');?></address>
                             </li>
                             <li class="connection__item">
-                                <svg class="icon-connection">
+                                <svg class="icon-big icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
                                 </svg>
                                 <a href="tel:+<?php the_field('clean-phone');?>" class="connection__link"><?php the_field('phone');?></a>
                             </li>
                             <li class="connection__item">
-                                <svg class="icon-connection">
+                                <svg class="icon-big icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
                                 </svg>
                                 <a href="mailto:<?php the_field('email-link');?>" class="connection__link"><?php the_field('email-link');?></a>
@@ -267,7 +268,7 @@
                         </ul>
                         <a href="<?php bloginfo('template_url');?>/contacts" class="connection__write">
                             Написать нам
-                            <svg class="incon-arrow">
+                            <svg class="icon-middle icon-arrow">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#arrow"></use>
                             </svg>  
                         </a>
