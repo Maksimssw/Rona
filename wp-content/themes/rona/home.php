@@ -8,8 +8,8 @@
     <?php get_header(); ?>
 
     <main>
-        <section class="intro container">
-            <div class="swiper intro-swiper">
+        <section class="hero container">
+            <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">       
                 <?php
                 global $post;
@@ -27,16 +27,16 @@
                 setup_postdata( $post );
                 ?>
 
-                <div class="swiper-slide intro-slider__item">
-                        <div class="intro__wrapper container">
-                            <div class="intro__block">
-                                <h1 class="intro__title">
-                                    <?php the_field('intro-title'); ?>    
-                                    <span><?php the_field('intro-title-green'); ?></span>
+                <div class="swiper-slide hero-slider__item">
+                        <div class="hero__wrapper container">
+                            <div class="hero__block">
+                                <h1 class="hero__title">
+                                    <?php the_field('hero-title'); ?>    
+                                    <span><?php the_field('hero-title-green'); ?></span>
                                 </h1>
-                                <p class="intro__description"><?php the_field('intro-description'); ?></p>
-                                <a href="<?php the_field('intro-button-link'); ?>" class="intro__button button-green">
-                                    <?php the_field('intro-button-text'); ?>
+                                <p class="hero__description"><?php the_field('hero-description'); ?></p>
+                                <a href="<?php the_field('hero-button-link'); ?>" class="hero__button button-green">
+                                    <?php the_field('hero-button-text'); ?>
                                 </a>
                             </div>
                         </div>
@@ -45,19 +45,19 @@
 
                 <?php }} wp_reset_postdata();?>
                 </div>
-                <button class="swiper-button-prev intro-button-prev slider-button-left">
-                    <svg class="icon-big">
+                <button class="hero__key hero__key_left slider-button-prev">
+                    <svg class="icon-large">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg>
                 </button>
-                <button class="swiper-button-next intro-button-next slider-button-right">
-                    <svg class="icon-big"> 
+                <button class="hero__key hero__key_right slider-button-next">
+                    <svg class="icon-large"> 
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg> 
                 </button>
-                <div class="intro__buttons container">
-                    <div class="intro-pagination-wrapper">
-                        <div class="swiper-pagination intro-pagination"></div>
+                <div class="hero__buttons container">
+                    <div class="hero-pagination-wrapper">
+                        <div class="swiper-pagination hero-pagination"></div>
                     </div>
                 </div> 
             </div>
@@ -87,31 +87,31 @@
                         setup_postdata( $post );
                         ?>
 
-                        <div class="swiper-slide furniture__item">
+                        <div class="swiper-slide card">
                             <a href="#">
-                                <div class="furniture__photo">
-                                    <img src="<?php the_field('popular-slider-image'); ?>" alt="furniture">
-                                    <button class="furniture__heart">
-                                        <svg class="icon-little">
+                                <div class="card__photo">
+                                    <img src="<?php the_field('popular-slider-image'); ?>" alt="card">
+                                    <button class="card__heart">
+                                        <svg class="icon-small">
                                             <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
                                         </svg> 
                                     </button>
                                 </div>
-                                <h3 class="furniture__heading">
+                                <h3 class="card__heading">
                                     <?php the_field('description-product'); ?>
                                 </h3>
-                                <span class="furniture__discount">
+                                <span class="card__discount">
                                     <?php the_field('popular-slider-price'); ?>
-                                    <svg class="icon-new-ruble">
+                                    <svg class="icon-card-discount">
                                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
                                     </svg>
                                 </span>
-                                <span class="furniture__price">
-                                    <?php the_field('popular-slider-old-price'); ?>
-                                    <svg class="icon-old-ruble">
-                                        <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
-                                    </svg>
-                                </span>
+                                <span class="card__price">
+                                <?php the_field('popular-slider-old-price'); ?>
+                                <svg class="icon-card-price">
+                                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
+                                </svg>
+                            </span>
                             </a>
                         </div>
 
@@ -119,14 +119,14 @@
                             
                     </div>
                     <div class="furniture__buttons">
-                        <button class="swiper-button-prev slider-button-left swiper-button-prev_furniture">
-                            <svg class="icon-big">
+                        <button class="slider-button-prev furniture__key">
+                            <svg class="icon-large">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
                         <div class="swiper-pagination-furniture"></div>
-                        <button class="swiper-button-next slider-button-right swiper-button-next_furniture">
-                            <svg class="icon-big">
+                        <button class="slider-button-next furniture__key ">
+                            <svg class="icon-large">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                             </svg> 
                         </button>
@@ -223,19 +223,19 @@
                         </p>
                         <ul class="connection__list">
                             <li class="connection__item">
-                                <svg class="icon-big icon-connection">
+                                <svg class="icon-large icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
                                 </svg>
                                 <address class="connection__link"><?php the_field('address');?></address>
                             </li>
                             <li class="connection__item">
-                                <svg class="icon-big icon-connection">
+                                <svg class="icon-large icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
                                 </svg>
                                 <a href="tel:+<?php the_field('clean-phone');?>" class="connection__link"><?php the_field('phone');?></a>
                             </li>
                             <li class="connection__item">
-                                <svg class="icon-big icon-connection">
+                                <svg class="icon-large icon-connection">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
                                 </svg>
                                 <a href="mailto:<?php the_field('email-link');?>" class="connection__link"><?php the_field('email-link');?></a>
@@ -268,7 +268,7 @@
                         </ul>
                         <a href="<?php bloginfo('template_url');?>/contacts" class="connection__write">
                             Написать нам
-                            <svg class="icon-middle icon-arrow">
+                            <svg class="icon-medium icon-arrow">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#arrow"></use>
                             </svg>  
                         </a>

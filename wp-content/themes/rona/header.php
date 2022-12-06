@@ -14,37 +14,37 @@
         <div class="heading container">
             <div class="contacts">
                 <ul class="contacts__list">
-                    <li>
-                        <a href="<?php the_field('instagram-link'); ?>">
-                            <svg class="icon-middle contacts__icon">
+                    <li class="contacts__item">
+                        <a href="<?php the_field('instagram-link'); ?>" class="contacts__link">
+                            <svg class="icon-medium contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php the_field('vk-link'); ?>">
-                            <svg class="icon-middle contacts__icon">
+                    <li class="contacts__item">
+                        <a href="<?php the_field('vk-link'); ?>" class="contacts__link">
+                            <svg class="icon-medium contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#vk"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php the_field('whatsApp-link'); ?>">
-                            <svg class="icon-middle contacts__icon">
+                    <li class="contacts__item">
+                        <a href="<?php the_field('whatsApp-link'); ?>" class="contacts__link">
+                            <svg class="icon-medium contacts__icon">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#whatsApp"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
-                        <a href="mailto:<?php the_field('email-link'); ?>">
-                            <svg class="icon-middle contacts__icon"> 
+                    <li class="contacts__item">
+                        <a href="mailto:<?php the_field('email-link'); ?>" class="contacts__link">
+                            <svg class="icon-medium contacts__icon"> 
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#mail"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
                 <div class="telephone">
-                    <svg class="icon-middle telephone__icon">
+                    <svg class="icon-medium telephone__icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#phone"></use>
                     </svg>
                     <a href="tel:<?php the_field('clean-phone'); ?>" class="telephone__number">
@@ -78,7 +78,7 @@
             </nav>
             <div class="user">
                 <p class="user__text">Петенков Д. А.</p>
-                <svg class="icon-little user__icon">
+                <svg class="icon-small user__icon">
                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                 </svg>
             </div>
@@ -93,7 +93,7 @@
             <div class="searсh">
                 <button class="button button_catalog">
                     <span>Каталог</span>
-                    <svg class="icon-big catalog-icon">
+                    <svg class="icon-large catalog-icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#hamburger"></use>
                     </svg> 
                 </button>
@@ -109,21 +109,17 @@
                     </button>
                 </form>
             </div>
-            <div class="info">
-                <svg class="icon-big info__icon">
+            <div class="basket">
+                <svg class="icon-large basket__icon">
                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#heart"></use>
                 </svg>  
-                <svg class="icon-big info__icon">
+                <svg class="icon-large basket__icon">
                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#basket"></use>
                 </svg>
-                <div class="info__score">
-                    <p>456 000</p>
-                    <div class="info__rub">
-                        <svg class="icon">
-                            <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
-                        </svg> 
-                    </div>
-                </div>
+                <span class="basket__text">456 000</span>
+                <svg class="basket__ruble">
+                    <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#ruble"></use>
+                </svg> 
             </div>
         </div>
     </header>

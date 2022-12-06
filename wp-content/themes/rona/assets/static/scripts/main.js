@@ -1,18 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
     const sliders = () => {
     // Home Screen Slider
-    new Swiper(".intro-swiper", {
+    new Swiper(".hero-swiper", {
         slidesPerView: 1,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
             clickable: true
         },
-
         effect: 'fade',
         navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.hero__key_right',
+        prevEl: '.hero__key_left',
         },
     });
     
@@ -24,14 +23,11 @@ window.addEventListener('DOMContentLoaded', () => {
             type: 'bullets',
             clickable: true
         },
-    
         navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
         },
-
         spaceBetween: 16,
-        
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -55,28 +51,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }); 
     }
 
-    const oldPrice = () => {
-        // Get a list of all old prices
-        const oldPriceList = document.querySelectorAll('.furniture__old');
-
-        // If there is no old price, the block will have not display 
-        oldPriceList.forEach(el => {
-            if(el.innerHTML === '') el.style.display = 'none'
-        })  
-    }
-
     const heart = () => {
-        // Get all the hearts
-        const hearts = document.querySelectorAll('.furniture__heart');
+        const hearts = document.querySelectorAll('.card__heart');
 
         // When click on the heart , it becomes active.
         hearts.forEach(el => {
-            el.addEventListener('click', () => {
-                if(el.classList.contains('active')){
-                    el.classList.remove('active')
-                } else {
-                    el.classList.add('active');
-                }
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                el.classList.toggle('active')
             });
         })
     }
@@ -111,7 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
     ymaps.ready(init);
 
     const formContacts = () => {
-        // Getting all input
         const inputs = document.querySelectorAll('.form__input .input');
 
         // Busting each input
@@ -133,7 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     try{
         sliders();
-        oldPrice();
         heart();
     }catch{}
 

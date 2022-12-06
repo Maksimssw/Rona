@@ -1,20 +1,20 @@
-/* Intro */
-.intro {
-    min-height: 736px;
+/* hero */
+.hero {
     position: relative;
-    z-index: 1;
+    min-height: 736px;
     overflow: hidden;
+    z-index: 1;
 }
 
-.intro__wrapper {
+.hero__wrapper {
     padding-top: 194px;
 }
 
-.intro__block{
+.hero__block{
     max-width: 670px;
 }
 
-.intro__title {
+.hero__title {
     color: var(--gray700);
     font-weight: 700;
     font-size: 62px;
@@ -22,12 +22,12 @@
     margin-bottom: 28px;
 }
 
-.intro__title span {
+.hero__title span {
     color: var(--green700);
     display: inline-block;
 }
 
-.intro__description {
+.hero__description {
     color: var(--gray500);
     font-weight: 600;
     font-size: 20px;
@@ -35,11 +35,11 @@
     margin-bottom: 48px;
 }
 
-.intro-pagination-wrapper{
+.hero-pagination-wrapper{
     position: relative;
 }
 
-.intro__buttons{
+.hero__buttons{
     position: absolute;
     bottom: 142px;
     z-index: 1;
@@ -47,7 +47,7 @@
     width: 100%;
 }
 
-.intro__search {
+.hero__search {
     display: none;
     padding: 10px;
     background-color: var(--gray600);
@@ -58,20 +58,20 @@
     cursor: pointer;
 }
 
-.intro__photo {
+.hero__photo {
     width: 20px;
     height: 20px;
 }
 
 
-.intro__buttons .intro-pagination{
+.hero__buttons .hero-pagination{
     position: absolute;
     left: 0;
     bottom: 0;
     width: max-content;
 }
 
-.intro-swiper{
+.hero-swiper{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -80,7 +80,7 @@
     top: 0;
 }
 
-.intro-intro-slider__item {
+.hero-hero-slider__item {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -90,7 +90,7 @@
 }
 
 
-.intro-slider__item img {
+.hero-slider__item img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -99,29 +99,21 @@
     z-index: -1;
 }
 
-.swiper-pagination_intro {
+.swiper-pagination_hero {
     width: 94px;
     position: relative;
 }
 
-.intro-button-next,
-.intro-button-prev {
+.hero__key{
     width: 48px;
     height: 48px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-.intro-button-next:after, 
-.intro-button-prev:after {
-    content: '';
-}
-
-.intro-button-next {
+.hero__key_right {
     right: 67px;
 }
 
-.intro-button-prev {
+.hero__key_left {
     left: 71px;    
 }
 
@@ -131,7 +123,7 @@
     padding-bottom: 120px;
     position: relative;
     z-index: 1;
-    background: url('../images/furniture/furnitureBg.png');
+    background: url('../images/furniture/furnitureBg.webp');
     background-repeat: no-repeat;
     background-size: 63% 98%;
     background-position: unset;
@@ -149,21 +141,22 @@
 }
 
 .furniture__buttons .swiper-pagination-furniture .swiper-pagination-bullet,
-.intro__buttons .intro-pagination .swiper-pagination-bullet {
+.hero__buttons .hero-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: var(--gray200);
 }
 
 .furniture__buttons .swiper-pagination-furniture .swiper-pagination-bullet-active,
-.intro__buttons .intro-pagination .swiper-pagination-bullet-active {
+.hero__buttons .hero-pagination .swiper-pagination-bullet-active {
     transform: scale(1.2);
     background-color: var(--green700)
 }
 
 .furniture__buttons .swiper-pagination-furniture .swiper-pagination-bullet,
-.intro__buttons .intro-pagination .swiper-pagination-bullet{
+.hero__buttons .hero-pagination .swiper-pagination-bullet{
     margin: 0 var(--swiper-pagination-bullet-horizontal-grid-column-gap,11px);
+    transition: background-color 0.3s;
 }
 
 .furniture__wrapper {
@@ -187,7 +180,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.furniture__item {
+/* Card */
+.card {
     padding: 15px;
     background-color: var(--white);
     border-radius: 8px;
@@ -195,40 +189,42 @@
     height: auto;
 }
 
-.furniture__photo {
+.card__photo {
     width: 206px;
     height: 206px;
     margin: 0 auto 28px;
 }
 
-.furniture__heart {
+.card__heart {
     position: absolute;
     top: 31px;
     right: 31px;
+    display: flex;
+    align-items: center;
     background: none;
     cursor: pointer;
-    transition: 0.4s all ease-in-out;
+    transition: transform 0.2s;
 }
 
-.furniture__heart svg {
+.card__heart svg {
     fill: var(--gray700);
 }
 
-.furniture__heart:hover,
-.furniture__heart:focus svg {
+.card__heart:hover,
+.card__heart:focus svg {
     transform: scale(1.2);
 }
 
-.furniture__heart.active svg{
+.card__heart.active svg{
     fill: #ff0000;
 }
 
-.furniture__photo img {
+.card__photo img {
     width: 100%;
     height: 100%;
 }
 
-.furniture__heading {
+.card__heading {
     color: var(--black);
     font-weight: 600;
     font-size: 16px;
@@ -236,13 +232,13 @@
     margin-bottom: 16px;
 }
 
-.furniture__price {
+.card__price {
     color: var(--gray900);
     margin-bottom: 5px;
     position: relative;
 }
 
-.furniture__discount {
+.card__discount {
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
@@ -252,14 +248,14 @@
     align-items: center;
 }
 
-.icon-new-ruble{
+.icon-card-discount {
     width: 28px;
     height: 28px;
     fill: var(--gray800);
 }
 
 
-.furniture__price {
+.card__price {
     color: var(--gray400);
     font-weight: 400;
     font-size: 14px;
@@ -269,16 +265,16 @@
     align-items: center;
 }
 
-.icon-old-ruble{
+.icon-card-price{
     width: 16px;
     height: 16px;
     fill: var(--gray400);
 }
 
-.furniture__price::after {
+.card__price::after {
     content: '';
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 0;
     width: 50px;
     height: 1px;
@@ -298,17 +294,13 @@
     align-items: end;
 }
 
-.swiper-button-next_furniture,
-.swiper-button-prev_furniture {
+.furniture__key {
     position: static;
     width: 44px;
     height: 44px;
+    transform: translateY(0);
 } 
 
-.swiper-button-next_furniture::after,
-.swiper-button-prev_furniture::after {
-    content: '';
-}
 
 .furniture__swiper .furniture__buttons .swiper-pagination-furniture {
     position: static;
@@ -334,7 +326,7 @@
 
 .about__info {
     display: grid;
-    grid-template-columns: minmax(320px, 878px);
+    grid-template-columns: minmax(296px, 878px);
     grid-template-rows: max-content max-content;
 }
 
@@ -372,7 +364,7 @@
     display: grid;
     grid-template-columns: minmax(86px, 98px)  minmax(85px, 175px) minmax(86px, 205px);
     margin-left: 64px;
-    column-gap: 80px;
+    grid-column-gap: 80px;
 }
 
 .progress__number {
@@ -425,7 +417,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.4s all ease-in-out;
+    transition: all 0.2s;
 }
 
 .catalog__wrapper {
@@ -511,7 +503,7 @@
     width: 16px;
     height: 16px;
     fill: var(--gray600);
-    transition: 0.3s all ease-in-out;
+    transition: transform 0.2s;
 }
 
 .inverted_catalog {
@@ -521,7 +513,6 @@
 
 /* Connection */
 .connection {
-    background: var(--white);
     margin-bottom: 110px;
 }
 
@@ -608,12 +599,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    grid-column-gap: 10px;
+    column-gap: 10px;
 }
 
 .icon-arrow {
     fill: var(--orange600);
-    transition: 0.4s all ease-in-out;
+    transition: transform 0.2s;
 }
 
 .connection__write:hover .icon-arrow{
@@ -622,49 +613,54 @@
 
 /* Adapting the width of 1440px */
 @media (max-width:1820px) {
-    /* Intro */
-    .intro {
+
+    body{
+        background-color: #fefefe;
+    }
+
+    /* hero */
+    .hero {
         margin-bottom: 0;
         min-height: 552px;
     }
 
-    .intro__block {
+    .hero__block {
         max-width: 487px;
         padding-left: 100px;
         box-sizing: content-box;
     }
 
-    .intro__wrapper{
+    .hero__wrapper{
         padding-top: 112px;
     }
 
-    .intro__title {
+    .hero__title {
         margin-bottom: 34px;
         font-size: 48px;
     }
 
-    .intro__buttons{
+    .hero__buttons{
         bottom: 109px;
     }
 
-    .intro__description {
+    .hero__description {
         margin-bottom: 32px;
         font-size: 16px;
     }
 
-    .intro__button {
+    .hero__button {
         font-size: 14px;
     }
 
-    .intro__buttons .intro-pagination {
+    .hero__buttons .hero-pagination {
         left: 100px;
     }
     
-    .intro-button-next {
+    .hero__key_right {
         right: 40px;
     }
 
-    .intro-button-prev {
+    .hero__key_left {
         left: 40px; 
     }
 
@@ -684,21 +680,22 @@
         width: 956px;
     }
 
-    .furniture__price::before {
-        right: 95px;
-    }
-
     .inverted_furniture {
         top: 39px;
         right: -38px;
     }
 
-    .furniture__discount::before{
-        right: 93px;
-    }
-
     .furniture__swiper {
         margin-right: 31px;
+    }
+
+    /* Card */
+    .card__price::before {
+        right: 95px;
+    }
+
+    .card__discount::before{
+        right: 93px;
     }
 
     /* About */
@@ -708,7 +705,7 @@
     }
 
     .about__wrapper {
-        column-gap: 24px;
+        justify-content: space-between;
     }
 
     .about__description{
@@ -734,8 +731,7 @@
     }
 
     /* Catalog */
-
-    .catalog{
+    .catalog {
         background-color: var(--white);
     }
 
@@ -760,7 +756,7 @@
     }
 
     .connection__wrapper{
-        grid-column-gap: 32px;
+        column-gap: 32px;
     }
 
     .inverted_connection {
@@ -771,33 +767,33 @@
 
 /* Adapting the width of 1180px */
 @media (max-width:1440px) {
-    /* Intro */
-    .intro {
+    /* hero */
+    .hero {
         padding-top: 115px;
         padding-bottom: 130px;
     }
 
-    .intro__block {
+    .hero__block {
         max-width: 481px;
     }
 
-    .intro__button {
+    .hero__button {
         width: max-content;
     }
 
-    .intro__search {
+    .hero__search {
         display: block;
     }
 
-    .intro-button-next  {
+    .hero__key_right  {
         right: 20px;
     }
 
-    .intro-button-prev {
+    .hero__key_left {
         left: 20px;
     }
 
-    .intro-slider__item img {
+    .hero-slider__item img {
         object-fit: cover;
     }
 
@@ -816,48 +812,49 @@
         width: 624px;
         margin-right: 46px;
     }
-    
-    .furniture__photo {
-        width: 100%;
-        height: auto;
-        margin-bottom: 17px;
-    }
-
-    .furniture__heart {
-        top: 27px;
-        right: 21px;
-    }
-
-    .furniture__heart img {
-        object-fit: contain;
-    }
 
     .furniture__title  {
         margin-left: 81px;
         width: 350px;
     }
 
-    .furniture__heading{
-        font-size: 14px;
-    }
-
-    .furniture__price::before {
-        right: 75px;
-    }
-    
     .furniture__article {
         display: block;
     }
+    
+    /* Card */
+    .card__photo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 17px;
+    }
 
-    .furniture__item {
+    .card__heart {
+        top: 27px;
+        right: 21px;
+    }
+
+    .card__heart img {
+        object-fit: contain;
+    }
+
+    .card__heading{
+        font-size: 14px;
+    }
+
+    .card__price::before {
+        right: 75px;
+    }
+
+    .card {
         padding: 10px;
     }
 
-    .furniture__price {
+    .card__price {
         margin-bottom: 0;
     }
 
-    .furniture__discount::before{
+    .card__discount::before{
         right: 75px;
     }
 
@@ -881,16 +878,16 @@
     }
 
    .about__wrapper {
-        justify-content: space-between;
+        column-gap: 24px;
    }
 
    /* Progress */
    .progress {
-        column-gap: 60px;
+        grid-column-gap: 60px;
    }
 
    .progress__number {
-        font-size: 23px;
+        font-size: 20px;
     }
 
    /* Catalog */
@@ -939,8 +936,8 @@
 
 /* Adapting the width of 1024px */
 @media (max-width:1180px) {
-    /* Intro */
-    .intro {
+    /* hero */
+    .hero {
         padding-bottom: 115px;
     }
 
@@ -948,27 +945,27 @@
         display: none;
     }
 
-    .intro__buttons .intro-pagination {
+    .hero__buttons .hero-pagination {
         left: 70px;
     }
 
-    .intro__block {
+    .hero__block {
         padding-left: 71px;
     }
 
-    .intro__title  {
+    .hero__title  {
         margin-bottom: 29px;
     }
 
-    .intro__wrapper{
+    .hero__wrapper{
         padding-top: 114px;
     }
 
-    .intro__block{
+    .hero__block{
         padding-left: 70px;
     }
 
-    .intro__description {
+    .hero__description {
         font-size: 14px;
     }
 
@@ -988,20 +985,21 @@
         height: 416px;
     }
 
-    .furniture__item {
-        padding: 6px;
-    }
-
-    .furniture__photo  {
-        margin-bottom: 8px;
-    }
-
     .furniture__buttons {
         justify-content: end;
     }
 
     .swiper-pagination-furniture{
         justify-content: end;
+    }
+
+    /* Card */
+    .card {
+        padding: 6px;
+    }
+
+    .card__photo  {
+        margin-bottom: 8px;
     }
 
     .discount {
@@ -1011,6 +1009,7 @@
     /* About */
     .about__wrapper {
         padding-left: 43px;
+        column-gap: 32px;
     }
 
     .about__photo {
@@ -1057,16 +1056,16 @@
 
 /* Adapting the width of 960px */
 @media (max-width: 1024px) {
-    /* Intro */
-    .intro__wrapper {
+    /* hero */
+    .hero__wrapper {
         padding-top: 155px;
     }
 
-    .intro__block {
+    .hero__block {
         padding-left: 0;
     }
 
-    .intro__buttons .intro-pagination {
+    .hero__buttons .hero-pagination {
         left: 0;
     }
 
@@ -1083,10 +1082,6 @@
 
     .furniture__wrapper {
         display: block;
-    }
-
-    .furniture__item {
-        padding: 14px;
     }
 
     .furniture__title {
@@ -1116,6 +1111,11 @@
         margin-bottom: 14px;
     }
 
+    /* Card */
+    .card {
+        padding: 14px;
+    }
+
     /* About */
     .about__photo {
         min-width: 321px;
@@ -1135,28 +1135,28 @@
 
 /* Adapting the width of 768px */
 @media (max-width: 960px) {
-    /* Intro */
-    .intro {
+    /* hero */
+    .hero {
         min-height: 485px;
     }
 
-    .intro__wrapper{
+    .hero__wrapper{
         padding-top: 115px;
     }
 
-    .intro__title {
+    .hero__title {
         font-size: 32px;
     }
 
-    .intro__block {
+    .hero__block {
         max-width: 398px;
     }
 
-    .intro__title{
+    .hero__title{
         margin-bottom: 20px;
     }
 
-    .intro__description {
+    .hero__description {
         font-size: 14px;
     }
 
@@ -1171,35 +1171,36 @@
         width: 675px;
     }
 
-    .furniture__heading {
-        font-weight: 500;
-    }
-
     .furniture__title{
         margin-left: 0;
-    }
-
-    .furniture__item {
-        padding: 19px;
-    }
-
-    .discount {
-        left: 17px;
-        top: 23px;
-    }
-
-    .furniture__heart  {
-        right: 34px;
-        top: 30px;
     }
 
     .inverted_furniture {
         right: -39px;
         top: 100px;
     }
+    
+    .discount {
+        left: 17px;
+        top: 23px;
+    }
 
     .swiper-wrapper_furniture {
         margin-bottom: 8px;
+    }
+
+    /* Card */
+    .card__heading {
+        font-weight: 500;
+    }
+
+    .card {
+        padding: 19px;
+    }
+
+    .card__heart  {
+        right: 34px;
+        top: 30px;
     }
 
    /*  About */
@@ -1214,7 +1215,7 @@
 
    .progress {
         margin-left: 21px;
-        column-gap: 29px;
+        grid-column-gap: 29px;
    }
 
    .about__text {
@@ -1333,10 +1334,6 @@
         width: 100%;
     }
 
-    .furniture__price::before {
-        right: 46px;
-    }
-
     .inverted_furniture {
         right: -60px;
     }
@@ -1345,7 +1342,12 @@
         height: 540px;
     }
 
-    .furniture__discount::before{
+    /* Card */
+    .card__price::before {
+        right: 46px;
+    }
+
+    .card__discount::before{
         right: 40px;
     }
 
@@ -1375,7 +1377,7 @@
 
     .progress {
         grid-template-columns: repeat(3, 86px);
-        column-gap: 24px;
+        grid-column-gap: 24px;
     }
 
     .progress__item:nth-child(3) {
@@ -1467,32 +1469,32 @@
 
 /* Adapting the width of 480px */
 @media (max-width: 639px) {
-    /* Intro */
-    .intro  {
+    /* hero */
+    .hero  {
         min-height: 360px;
     }
 
-    .intro__wrapper{
+    .hero__wrapper{
         padding-top: 60px;
     }
 
-    .intro__block {
+    .hero__block {
         max-width: 288px;
     }
 
-    .intro__search {
+    .hero__search {
         right: 16px;
     }
 
-    .intro__button {
+    .hero__button {
         font-size: 12px;
     }
 
-    .intro__buttons{
+    .hero__buttons{
         bottom: 30px;
     }
 
-    .intro__description {
+    .hero__description {
         font-size: 12px;
         margin-bottom: 22px;
     }
@@ -1509,36 +1511,37 @@
         margin-bottom: 18px;
     }
 
-    .furniture__photo {
-        margin-bottom: 4px;
-    }
-
-    .furniture__discount::before{
-        right: 87px;
-    }
-
-    .furniture__heart {
-        right: 33px;
-    }
-
-    .furniture__heading {
-        margin-bottom: 14px;
-    }
-
-    .furniture__price::before {
-        right: 88px;
-    }
-
-    .furniture__item {
-        padding: 12px;
-    }
-
     .inverted_furniture {
         margin-bottom: 8px;
     }
 
     .swiper-wrapper_furniture {
         margin-bottom: 18px;
+    }
+
+    /* Card */
+    .card__photo {
+        margin-bottom: 4px;
+    }
+
+    .card__discount::before{
+        right: 87px;
+    }
+
+    .card__heart {
+        right: 33px;
+    }
+
+    .card__heading {
+        margin-bottom: 14px;
+    }
+
+    .card__price::before {
+        right: 88px;
+    }
+
+    .card {
+        padding: 12px;
     }
     
     /* About */
@@ -1569,7 +1572,7 @@
     }
 
     .progress {
-        column-gap: 13px;
+        grid-column-gap: 24px;
     }
 
     /* Catalog */
@@ -1686,26 +1689,26 @@
         padding-right: 5px;
     }
 
-   /* Intro */
-   .intro {
+   /* hero */
+   .hero {
         min-height: 400px;
    }
 
-   .intro__title {
+   .hero__title {
         line-height: 130%;
         margin-bottom: 12px;
    }
 
-   .intro__block {
+   .hero__block {
         max-width: 266px;
         padding-left: 10px;
    }
 
-   .intro__wrapper{
+   .hero__wrapper{
         padding-top: 51px;
    }
 
-   .intro__description  {
+   .hero__description  {
         margin-bottom: 25px;
    }
 
@@ -1728,36 +1731,37 @@
         padding-left: 37px;
    }
 
-   .furniture__heart {
+   .furniture__buttons{
+        width: fit-content;
+    }
+
+    /* Card */
+   .card__heart {
         top: 34px;
         right: 32px;
    }
 
-   .furniture__price::before {
+   .card__price::before {
         right: 57px;
    }
 
-   .furniture__item {
+   .card {
         padding: 16px;
    }
 
-   .furniture__photo  {
+   .card__photo  {
         margin-bottom: 12px;
    }
 
-   .furniture__buttons{
-        width: fit-content;
-   }
-
-   .furniture__discount::before{
+   .card__discount::before{
         right: 50px;
    }
 
    /* About */
    .progress {
         padding-left: 0;
-        column-gap: 20px;
-        margin-left: 10px;
+        grid-column-gap: 20px;
+        margin-left: 0;
    }
 
    .progress__item {

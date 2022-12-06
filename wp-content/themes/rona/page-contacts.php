@@ -8,28 +8,28 @@
     <?php get_header(); ?>
 
     <main>
-        <nav class="breadcrumb container">
-            <ul class="breadcrumb__list">
-                <li class="breadcrumb__item">
-                    <a href="/rona" class="breadcrumb__link">
+        <nav class="breadcrumbs container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="/rona" class="breadcrumbs__link">
                         Главная 
                     </a>
                     <svg class="icon">
                         <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#downArrow"></use>
                     </svg>
                 </li>
-                <li class="breadcrumb__item">
-                    <span href="#" class="breadcrumb__link breadcrumb__active">
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__link breadcrumbs__link_active">
                         Контакты 
                     </span>
                 </li>
             </ul>
         </nav>
-        <section class="hero container">
-            <div class="hero__wrapper">
+        <section class="page-contacts container">
+            <div class="page-contacts__wrapper">
                 <aside class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#people"></use>
@@ -39,7 +39,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#truck"></use>
@@ -49,7 +49,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#workman"></use>
@@ -59,7 +59,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link active" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#contacts"></use>
@@ -69,7 +69,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#shield"></use>
@@ -79,7 +79,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="menu__item">
+                        <li>
                             <a class="menu__link" href="#">
                                 <svg class="icon-menu">
                                     <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#document"></use>
@@ -142,13 +142,13 @@
                         <?php echo do_shortcode('[contact-form-7 id="277" title="Contact form"]') ?>
                     </div>
                 </div>
-                <div id="map" class="hero__map">
-                    <div class="hero__hidden">
-                        <div class="hero__location">
+                <div id="map" class="page-contacts__map">
+                    <div class="page-contacts__hidden">
+                        <div class="page-contacts__location">
                             <svg class="icon-location">
                                 <use xlink:href="<?php bloginfo('template_url');?>/assets/static/icons/sprite.svg#location"></use>
                             </svg> 
-                            <span class="hero__we">Мы на карте</span>
+                            <span class="page-contacts__we">Мы на карте</span>
                         </div>
                         <a href="#" class="map-link">Перейти</a>
                     </div>
