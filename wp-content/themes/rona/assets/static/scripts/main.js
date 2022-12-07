@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
         },
         effect: 'fade',
         navigation: {
-        nextEl: '.hero__key_right',
-        prevEl: '.hero__key_left',
+        nextEl: '.hero__button_right',
+        prevEl: '.hero__button_left',
         },
     });
     

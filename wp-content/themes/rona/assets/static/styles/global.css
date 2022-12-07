@@ -100,7 +100,7 @@ br{
 
 body {
     font-family: 'OpenSans', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fefefe;
 }
 
 h1,h2,h3 {
@@ -126,6 +126,12 @@ input {
     width: 1px;
     height: 1px;
     clip: rect(0 0 0 0);
+}
+
+.grid-row{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
 }
 
 /* Icon Size */
@@ -181,7 +187,7 @@ input {
 .slider-button-next {
     position: absolute;
     top: 50%;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
@@ -209,9 +215,6 @@ input {
     position: absolute;
     right: 0;
     top: 0;
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
     max-width: fit-content;
     transform: rotate(-90deg);
 }
@@ -261,6 +264,13 @@ input {
     background-color: var(--gray800);
 }
 
+.header__text{
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+}
+
 .hamburger {
     display: none;
     width: 28px;
@@ -274,24 +284,13 @@ input {
 }
 
 /* Contacts */
-.contacts {
-    display: flex;
-}
-
-.contacts__list {
-    display: grid;
-    grid-auto-flow: column;
+.contacts{
     grid-column-gap: 15px;
     margin-right: 17px;
 }
 
-.contacts__item{
-    display: flex;
-    align-items: center;
-}
-
 .contacts__link{
-    display: flex;
+    display: grid;
 }
 
 .contacts__icon {
@@ -305,9 +304,7 @@ input {
 
 /* Telephone */
 .telephone {
-    display: flex;
     grid-column-gap: 16px;
-    align-items: center;
 }
 
 .telephone__icon {
@@ -315,11 +312,7 @@ input {
 }
 
 .telephone__number {
-    line-height: 14px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--white);
-    transition: 0.2s all ease-in-out;
+    transition: color 0.2s;
 }
 
 .telephone__number:hover,
@@ -328,17 +321,11 @@ input {
 }
 
 /* Navigation */
-.navigation__list {
-    display: grid;
-    grid-auto-flow: column;
+.navigation {
     grid-column-gap: 24px;
 }
 
 .navigation__link {
-    line-height: 100%;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--white);
     transition: 0.2s all ease-in-out;
 }
 
@@ -347,18 +334,9 @@ input {
 }
 
 /* User */
-.user {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+.user { 
+    grid-column-gap: 10px;
     cursor: pointer;
-}
-
-.user__text {
-    line-height: 100%;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--white);
 }
 
 .user__icon { 
@@ -372,10 +350,8 @@ input {
 }
 
 .header__wrapper {
-    display: grid;
     grid-template-columns: auto 1fr auto;
     grid-column-gap: 64px;
-    align-items: center;
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 26px;
@@ -393,17 +369,15 @@ input {
 /* Button Catalog */
 
 .button_catalog {
-    display: flex;
-    align-items: center;
+    grid-column-gap: 10px;
     justify-content: center;
-    column-gap: 10px;
+    padding: 8px 32px;
     line-height: 100%;
     font-size: 16px;
     font-weight: 600;
     color: var(--green700);
     border: 1.5px solid var(--green700);
     background: none;
-    padding: 8px 32px;
 }
 
 .catalog-icon{
@@ -412,9 +386,7 @@ input {
 
 /* Searсh */
 .searсh {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
+    grid-column-gap: 20px;
 }
 
 .searсh__burger {
@@ -422,21 +394,15 @@ input {
     height: 24px;
 }
 
-
-.searсh__wrapper {
-    display: flex;
-    align-items:center;
-}
-
 .search__input {
     height: 32px;
     line-height: 100%;
     font-size: 14px;
     font-weight: 600;
-    color: var(--gray800);
     padding-left: 25px;
     border: 1px solid var(--gray300);
     border-radius: 4px 0px 0px 4px;
+    color: var(--gray800);
 }
 
 .search__block {
@@ -463,30 +429,28 @@ input {
 
 /* Gray button */
 .searсh__find {
+    padding: 9px 24px;
     line-height: 100%;
     font-size: 14px;
     font-weight: 400;
-    border-radius: 0px 2px 2px 0px;
     border: none;
-    background: var(--gray600);
+    border-radius: 0px 2px 2px 0px;
     color: var(--white);
-    padding: 9px 24px;
+    background: var(--gray600);
 }
 
-/* Basket */
-.basket {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
+/* Info */
+.info {
+    grid-column-gap: 8px;
 }
 
-.basket__icon {
+.info__icon {
     position: relative;
     fill: var(--gray800);
     cursor: pointer;
 }
 
-.basket__icon::before {
+.info__icon::before {
     content: '';
     position: absolute;
     top: -1px;
@@ -497,13 +461,17 @@ input {
     background: var(--orange500);
 }
 
-.basket__ruble {
+.cart{
+    grid-column-gap: 8px;
+}
+
+.cart__ruble {
     width: 16px;
     height: 16px;  
     fill: var(--gray800);
 }
 
-.basket__text {
+.cart__text {
     width: max-content;
     line-height: 100%;
     font-size: 16px;
@@ -518,7 +486,6 @@ input {
 }
 
 .footer__wrapper {
-    display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--white);
     padding-bottom: 26px;
@@ -558,8 +525,6 @@ input {
 }
 
 .footer__company {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -590,9 +555,8 @@ input {
 
 .information__item {
     position: relative;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+    grid-column-gap: 10px;
+    grid-auto-columns: max-content;
 }
 
 .information__link {
@@ -621,9 +585,7 @@ input {
 
 /* Social */
 .social {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+    grid-column-gap: 10px;
 }
 
 .social__link {
@@ -679,19 +641,11 @@ input {
     }
 
     .discount {
-        display: flex;
+        display: grid;
     }
 
     /* Heading */
     .heading {
-        display: none;
-    }
-
-    .contacts {
-        display: none;
-    }
-    
-    .navigation {
         display: none;
     }
 
@@ -782,6 +736,7 @@ input {
         display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 0px;
+        grid-auto-flow: row;
     }
 
     .footer__block {
@@ -823,13 +778,17 @@ input {
 /* Adapting the width of 460px */
 @media (max-width: 639px) {
 
-    /* Basket */
-    .basket {
+    /* Info */
+    .info {
         justify-content: end;
         width: max-content;
     }
 
-    .basket__icon {
+    .cart__text{
+        display: none;
+    }
+
+    .cart__ruble{
         display: none;
     }
 

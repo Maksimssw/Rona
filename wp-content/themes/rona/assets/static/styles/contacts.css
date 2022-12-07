@@ -9,14 +9,13 @@ main{
 }
 
 .breadcrumbs__list {
-    display: flex;
-    column-gap: 6px;
+    grid-column-gap: 6px;
+    grid-auto-columns: max-content;
 }
 
 .breadcrumbs__item {
-    display: flex;
-    column-gap: 6px;
-    align-items: center;
+    grid-column-gap: 6px;
+    grid-auto-columns: max-content;
 }
 
 .breadcrumbs__item svg {
@@ -66,7 +65,6 @@ main{
     display: none;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 100%;
     width: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
@@ -74,7 +72,7 @@ main{
 }
 
 .page-contacts__location{
-    display: flex;
+    display: grid;
     grid-column-gap: 12px;
     align-items: center;
     justify-content: center;
@@ -91,6 +89,7 @@ main{
     color: var(--white);
     font-weight: 500;
     font-size: 16px;
+    text-align: center;
 }
 
 .icon-location{
@@ -101,7 +100,6 @@ main{
 
 /* Menu */
 .menu__list {
-    width: 370px;
     display: grid;
     grid-row-gap: 12px;
 }
@@ -110,8 +108,8 @@ main{
     background-color: var(--white);
     border-radius: 8px;
     padding: 18px 36px;
-    display: flex;
     grid-column-gap: 8px;
+    grid-auto-columns: max-content;
     transition: background-color 0.2s;
 }
 
@@ -127,8 +125,6 @@ main{
     font-size: 16px;
     line-height: 100%;
     color: var(--gray600);
-    display: flex;
-    align-items: center;
     transition: color 0.2s;
 }
 
@@ -184,15 +180,14 @@ main{
 }
 
 .feedback__list {
-    display: grid;
     grid-row-gap: 12px;
     margin-bottom: 20px;
 }
 
 .feedback__item {
+    grid-auto-columns: max-content;
     display: flex;
-    align-items: center;
-    column-gap: 14px;
+    grid-column-gap: 14px;
 }
 
 .feedback__link {
@@ -205,6 +200,7 @@ main{
 
 .social_feedback{
     margin-bottom: 48px;
+    grid-auto-columns: max-content;
 }
 
 /* Form */
@@ -488,7 +484,8 @@ main{
 @media (max-width: 639px) {
     /* Page */
     .page-contacts__hidden {
-        display: flex;
+        display: grid;
+        align-content: center;
     }
 
     .page-contacts__map {
